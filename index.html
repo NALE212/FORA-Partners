@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#F3F4F2">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>FORA Partners</title>
+<meta name="description" content="FORA Partners connects suppliers with retailers: checked contacts, real interest and help with the first meetings.">
+<link rel="canonical" href="https://forapartners.eu/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FORA Partners">
+<meta property="og:title" content="FORA Partners | The shortest way to the right partner">
+<meta property="og:description" content="We connect suppliers with retailers: checked contacts, real interest and help with the first meetings.">
+<meta property="og:url" content="https://forapartners.eu/">
+<meta property="og:image" content="https://forapartners.eu/share-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face { font-family: "Gloock"; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/gloock-latin-ext.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Gloock"; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/gloock-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Schibsted Grotesk"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/schibsted-latin-ext.woff2) format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Schibsted Grotesk"; font-style: normal; font-weight: 400 700; font-display: swap; src: url(fonts/schibsted-latin.woff2) format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* Coffeehouse table: white marble, navy velvet, brass rules, logo blue for actions. */
+:root {
+  --marble: #F3F4F2;
+  --marble-2: #E7E9E7;
+  --card: #FFFFFF;
+  --ink: #111B30;
+  --muted: #535B6A;
+  --rule: rgba(17,27,48,.14);
+  --rule-strong: rgba(17,27,48,.45);
+  --velvet: #16213B;
+  --velvet-2: #1D2A49;
+  --on-velvet: #F3F4F2;
+  --on-velvet-muted: rgba(243,244,242,.72);
+  --brass: #A07C3A;
+  --brass-soft: #C9AE78;
+  --blue: #2F6BFF;
+  --blue-text: #1D4FD8;
+  --blue-hover: #1F58E8;
+  --on-blue: #FFFFFF;
+  --cta: var(--blue);
+  --surface: var(--card);
+  --ok-wash: #DDEFE5;
+  --err: #B42318;
+  --err-wash: #F8E1DD;
+  --f-display: "Gloock", Georgia, serif;
+  --f-text: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --max: 1160px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --marble: #12151C; --marble-2: #181C25; --card: #1C212C; --ink: #EDEEEA; --muted: #A6ACB8;
+    --rule: rgba(237,238,234,.13); --rule-strong: rgba(237,238,234,.45);
+    --velvet: #0D1424; --velvet-2: #152038; --brass: #CDB27A; --brass-soft: #8C7444;
+    --blue: #6F97FF; --blue-text: #93B0FF; --blue-hover: #8AABFF; --on-blue: #0B1020;
+    --ok-wash: #183328; --err: #FF8A80; --err-wash: #3A1E1E;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --marble: #12151C; --marble-2: #181C25; --card: #1C212C; --ink: #EDEEEA; --muted: #A6ACB8;
+  --rule: rgba(237,238,234,.13); --rule-strong: rgba(237,238,234,.45);
+  --velvet: #0D1424; --velvet-2: #152038; --brass: #CDB27A; --brass-soft: #8C7444;
+  --blue: #6F97FF; --blue-text: #93B0FF; --blue-hover: #8AABFF; --on-blue: #0B1020;
+  --ok-wash: #183328; --err: #FF8A80; --err-wash: #3A1E1E;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; accent-color: var(--blue); caret-color: var(--blue); scrollbar-color: var(--rule-strong) transparent; }
+body { margin: 0; background: var(--marble); color: var(--ink); font-family: var(--f-text); font-size: 1.0625rem; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+::selection { background: color-mix(in srgb, var(--brass) 30%, transparent); color: var(--ink); }
+h1, h2, h3 { margin: 0; font-weight: 400; text-wrap: balance; }
+h2 { font-family: var(--f-display); font-size: clamp(2rem, 3.4vw, 2.85rem); line-height: 1.08; letter-spacing: -0.005em; }
+h3 { font-weight: 650; font-size: 1.1rem; line-height: 1.3; }
+p { margin: 0; }
+p, li, dd, summary { text-wrap: pretty; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+.off, [hidden] { display: none !important; }
+.wrap { max-width: var(--max); margin: 0 auto; padding-inline: max(20px, env(safe-area-inset-left, 0px)) max(20px, env(safe-area-inset-right, 0px)); }
+@media (min-width: 760px) { .wrap { padding-inline: max(40px, env(safe-area-inset-left, 0px)) max(40px, env(safe-area-inset-right, 0px)); } }
+
+/* Brass double rule: the café's signature line */
+.double { height: 5px; border-top: 1px solid var(--brass); border-bottom: 1px solid var(--brass); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; font: 650 1rem/1 var(--f-text); padding: 1rem 1.6rem; border-radius: 999px; border: 1.5px solid transparent; text-decoration: none; cursor: pointer; white-space: nowrap; transition: background .15s, border-color .15s, color .15s; }
+.btn svg { width: 16px; height: 16px; }
+.btn-primary { background: var(--blue); color: var(--on-blue); }
+.btn-primary:hover { background: var(--blue-hover); }
+.btn-secondary { background: var(--velvet); color: var(--on-velvet); }
+.btn-ghost { background: transparent; color: var(--ink); border-color: var(--rule-strong); }
+.btn-ghost:hover { border-color: var(--ink); }
+.go { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 650; text-decoration: underline; text-decoration-color: var(--brass); text-decoration-thickness: 1.5px; text-underline-offset: 5px; }
+.go svg { width: 15px; height: 15px; }
+.go:hover { color: var(--blue-text); text-decoration-color: currentColor; }
+.linkish { font: inherit; background: none; border: 0; padding: 0; color: var(--blue-text); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Header: the café sign */
+header.site { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: color-mix(in srgb, var(--marble) 93%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
+header.site .wrap { display: flex; align-items: center; gap: 2rem; min-height: 72px; }
+.logo { display: inline-flex; align-items: center; gap: 0.7rem; text-decoration: none; color: var(--ink); }
+.logo .mark { width: 34px; height: 34px; flex: none; }
+.wm { display: grid; line-height: 1; }
+.wm b { font-family: var(--f-display); font-weight: 400; font-size: 1.5rem; letter-spacing: 0.04em; }
+.wm span { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.28em; margin-top: 0.15rem; color: var(--muted); }
+nav.main { display: flex; gap: 0.25rem; margin-left: auto; }
+nav.main a { text-decoration: none; color: var(--muted); font-weight: 550; font-size: 0.95rem; padding: 0.5rem 0.75rem; transition: color .15s; }
+nav.main a:hover { color: var(--ink); text-decoration: underline; text-decoration-color: var(--brass); text-underline-offset: 6px; }
+.head-right { display: flex; align-items: center; gap: 1rem; }
+.lang { display: flex; font-size: 0.8rem; font-weight: 650; border: 1px solid var(--rule-strong); border-radius: 999px; padding: 2px; }
+.lang button { font: inherit; border: 0; background: none; padding: 0.38rem 0.62rem; color: var(--muted); cursor: pointer; border-radius: 999px; }
+.lang button[aria-pressed="true"] { background: var(--velvet); color: var(--on-velvet); }
+header.site .btn { padding: 0.72rem 1.1rem; font-size: 0.92rem; }
+@media (max-width: 1060px) { header.site .btn { display: none; } }
+@media (max-width: 860px) {
+  header.site .wrap { flex-wrap: wrap; gap: 0 1rem; min-height: 0; padding-block: 0.8rem 0; }
+  .head-right { margin-left: auto; }
+  nav.main { order: 3; flex-basis: 100%; margin: 0.4rem -0.5rem 0; justify-content: space-between; flex-wrap: wrap; padding-bottom: 0.3rem; }
+  nav.main a { white-space: nowrap; padding: 0.55rem 0.5rem; font-size: 0.88rem; }
+}
+@media (max-width: 440px) { nav.main { margin-inline: -0.3rem; gap: 0; } nav.main a { padding-inline: 0.3rem; font-size: 0.84rem; } }
+@media (max-width: 380px) { nav.main a { padding-inline: 0.22rem; font-size: 0.8rem; } }
+section[id] { scroll-margin-top: 72px; }
+@media (max-width: 860px) { section[id] { scroll-margin-top: 104px; } }
+
+/* The table: reservation card */
+.ornament { display: flex; align-items: center; gap: 0.9rem; width: min(340px, 70%); color: var(--brass); }
+.ornament::before, .ornament::after { content: ""; flex: 1; height: 1px; background: currentColor; }
+.ornament svg { width: 24px; height: 24px; flex: none; }
+.pick { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-top: 0.3rem; }
+
+/* Place cards: the two sides */
+.places { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1080px; margin: 3.5rem auto 0; padding-bottom: 5.5rem; }
+.place { background: var(--card); padding: 8px; box-shadow: 0 1px 0 var(--rule), 0 22px 44px -36px rgba(17,27,48,.45); }
+.place-in { height: 100%; border: 1px solid var(--brass); outline: 1px solid var(--brass); outline-offset: -5px; padding: 2rem 2rem 1.9rem; display: grid; gap: 0.9rem; align-content: start; }
+.place h2 { font-size: clamp(1.8rem, 2.6vw, 2.2rem); }
+.place p { color: var(--muted); }
+.place ul { list-style: none; margin: 0.3rem 0 0.5rem; padding: 0; display: grid; gap: 0.6rem; }
+.place li { display: grid; grid-template-columns: 1.4rem 1fr; font-weight: 500; }
+.place li::before { content: ""; width: 7px; height: 7px; margin-top: 0.55em; border-radius: 50%; border: 1.5px solid var(--brass); }
+@media (max-width: 820px) { .places { grid-template-columns: 1fr; gap: 1.25rem; margin-top: 1.25rem; padding-bottom: 4rem; } .place-in { padding: 1.6rem 1.3rem; } }
+
+/* Sections */
+section.block { padding-block: 6rem; }
+section.block.soft { background: var(--marble-2); }
+@media (max-width: 760px) { section.block { padding-block: 4rem; } }
+.sec-head { display: grid; gap: 1rem; max-width: 720px; margin-bottom: 3rem; }
+.sec-head.center { justify-items: center; text-align: center; margin-inline: auto; }
+.sec-head p { color: var(--muted); font-size: 1.1rem; max-width: 52ch; }
+
+/* The menu: services on navy velvet */
+section.menu { background: var(--velvet); color: var(--on-velvet); }
+.menu .sec-head p { color: var(--on-velvet-muted); }
+.menu .double { width: min(420px, 80%); margin: 0 auto 3rem; border-top-color: var(--brass-soft); border-bottom-color: var(--brass-soft); }
+.menu-list { max-width: 860px; margin: 0 auto; display: grid; gap: 0; }
+.dish { display: grid; grid-template-columns: 20rem 1fr; align-items: baseline; gap: 0.4rem 2.5rem; padding: 1.6rem 0; border-bottom: 1px solid rgba(201,174,120,.28); }
+.dish:first-child { border-top: 1px solid rgba(201,174,120,.28); }
+.dish h3 { font-family: var(--f-display); font-weight: 400; font-size: 1.6rem; color: var(--on-velvet); display: flex; align-items: baseline; gap: 0.8rem; }
+.dish h3::after { content: ""; flex: 1; min-width: 1.5rem; border-bottom: 1.5px dotted var(--brass-soft); }
+.dish p { color: var(--on-velvet-muted); max-width: 52ch; }
+@media (max-width: 700px) { .dish { grid-template-columns: 1fr; } .dish h3::after { display: none; } }
+
+/* Order of the visit: saucers on a brass line */
+.visit { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; position: relative; }
+.visit::before { content: ""; position: absolute; top: 32px; left: 32px; right: calc((100% - 6rem) / 4 - 32px); height: 1px; background: var(--brass); }
+.visit li { position: relative; display: grid; gap: 0.55rem; align-content: start; }
+.saucer { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: var(--marble); border: 1px solid var(--brass); box-shadow: inset 0 0 0 7px var(--marble), inset 0 0 0 8px var(--brass); font-family: var(--f-display); font-size: 1.5rem; margin-bottom: 0.8rem; }
+section.soft .saucer { background: var(--marble-2); box-shadow: inset 0 0 0 7px var(--marble-2), inset 0 0 0 8px var(--brass); }
+.visit li:last-child .saucer { background: var(--brass); color: var(--card); border-color: var(--brass); box-shadow: inset 0 0 0 7px var(--brass), inset 0 0 0 8px rgba(255,255,255,.6); }
+.visit h3 { font-family: var(--f-display); font-weight: 400; font-size: 1.35rem; }
+.visit p { color: var(--muted); }
+@media (max-width: 860px) { .visit { grid-template-columns: 1fr 1fr; row-gap: 2.5rem; } .visit::before { display: none; } }
+@media (max-width: 520px) { .visit { grid-template-columns: 1fr; row-gap: 1.75rem; } .visit li { grid-template-columns: 64px 1fr; column-gap: 1.1rem; } .saucer { grid-row: span 2; margin: 0; } }
+
+/* About: the newspaper on its holder */
+.paper { background: var(--card); padding: 3rem 3.25rem; box-shadow: 0 1px 0 var(--rule); }
+.masthead { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 1rem 2rem; padding-bottom: 1.1rem; margin-bottom: 2rem; border-bottom: 1px solid var(--ink); }
+.masthead .double { grid-column: 1 / -1; border-color: var(--ink); }
+.masthead span { font-size: 0.95rem; color: var(--muted); }
+.columns { columns: 2 22rem; column-gap: 3rem; column-rule: 1px solid var(--rule); }
+.columns p { margin-bottom: 1rem; color: var(--muted); break-inside: avoid; }
+.columns p:first-child { color: var(--ink); font-size: 1.15rem; }
+.values { list-style: none; margin: 2.25rem 0 0; padding: 1.5rem 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; border-top: 1px solid var(--rule); }
+.values li { display: grid; gap: 0.3rem; align-content: start; }
+.values h3 { font-family: var(--f-display); font-weight: 400; font-size: 1.35rem; }
+.values p { color: var(--muted); font-size: 0.96rem; }
+@media (max-width: 900px) { .values { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .paper { padding: 1.75rem 1.25rem; } .masthead { grid-template-columns: 1fr; } .values { grid-template-columns: 1fr; } }
+
+/* FAQ */
+.faq-wrap { display: grid; grid-template-columns: 0.75fr 1.25fr; gap: 4rem; align-items: start; }
+@media (max-width: 860px) { .faq-wrap { grid-template-columns: 1fr; gap: 0; } }
+.faq { border-top: 1px solid var(--ink); }
+.faq details { border-bottom: 1px solid var(--rule); }
+.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; padding: 1.35rem 0; font-weight: 650; font-size: 1.1rem; transition: color .15s; }
+.faq summary:hover { color: var(--blue-text); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: ""; flex: none; width: 14px; height: 14px; color: var(--brass); background: linear-gradient(currentColor 0 0) center / 14px 1.5px no-repeat, linear-gradient(currentColor 0 0) center / 1.5px 14px no-repeat; }
+.faq details[open] summary::after { background-size: 14px 1.5px, 0 0; }
+.faq details p { color: var(--muted); padding: 0 2.5rem 1.5rem 0; max-width: 62ch; }
+
+/* Contact: the reservation */
+.contact .wrap { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 5rem; align-items: start; }
+@media (max-width: 940px) { .contact .wrap { grid-template-columns: 1fr; gap: 2.5rem; } }
+.contact-copy { display: grid; gap: 1.25rem; min-width: 0; justify-items: start; }
+.contact-copy .lede { color: var(--muted); font-size: 1.1rem; }
+.checks { list-style: none; padding: 0; margin: 0.4rem 0 0; display: grid; gap: 0.7rem; }
+.checks li { display: flex; gap: 0.85rem; align-items: center; font-weight: 500; }
+.checks li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid var(--brass); flex: none; }
+.mail { font-weight: 650; text-decoration: underline; text-decoration-color: var(--brass); text-underline-offset: 5px; }
+form.match { background: var(--card); padding: 12px; min-width: 0; box-shadow: 0 1px 0 var(--rule), 0 30px 60px -44px rgba(17,27,48,.4); }
+.form-in { border: 1px solid var(--brass); outline: 1px solid var(--brass); outline-offset: -6px; padding: 2.25rem; display: grid; gap: 1.15rem; }
+@media (max-width: 480px) { form.match { padding: 8px; } .form-in { padding: 1.5rem 1.1rem; outline-offset: -5px; } }
+.seg { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule-strong); border-radius: 999px; padding: 3px; }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label { text-align: center; padding: 0.7rem 0.5rem; font-weight: 600; font-size: 0.95rem; cursor: pointer; color: var(--muted); border-radius: 999px; }
+.seg input:checked + label { background: var(--velvet); color: var(--on-velvet); }
+.seg input:focus-visible + label { outline: 2px solid var(--blue); outline-offset: 2px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 560px) { .row2 { grid-template-columns: 1fr; } }
+.field { display: grid; gap: 0.4rem; min-width: 0; }
+.field label { font-size: 0.88rem; font-weight: 650; }
+.field .opt { font-weight: 450; color: var(--muted); }
+.field input, .field textarea { font: inherit; font-size: 1rem; color: var(--ink); background: var(--marble); border: 1px solid transparent; border-bottom: 1px solid var(--rule-strong); border-radius: 0; padding: 0.8rem 0.85rem; width: 100%; transition: border-color .15s, background .15s; }
+.field input::placeholder, .field textarea::placeholder { color: color-mix(in srgb, var(--muted) 80%, var(--marble)); }
+.field textarea { min-height: 120px; resize: vertical; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--blue); background: var(--card); }
+.field [aria-invalid="true"], .field [aria-invalid="true"]:focus { border-color: var(--err); background: var(--err-wash); }
+.consent { display: flex; gap: 0.65rem; align-items: flex-start; font-size: 0.9rem; color: var(--muted); }
+.consent input { appearance: none; -webkit-appearance: none; width: 20px; height: 20px; margin: 1px 0 0; flex: none; border: 1.5px solid var(--brass); border-radius: 3px; background: var(--card); cursor: pointer; transition: background .15s, border-color .15s; }
+.consent input:checked { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.5 12.5l3.8 3.8L17.5 8.5' fill='none' stroke='%23C9AE78' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 100% no-repeat; background-color: var(--velvet); border-color: var(--brass); }
+.consent input[aria-invalid="true"] { border-color: var(--err); background-color: var(--err-wash); }
+.form-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+.form-foot small { color: var(--muted); font-size: 0.86rem; max-width: 32ch; }
+.sent { padding: 0.9rem 1rem; background: var(--marble-2); font-size: 0.95rem; border: 1px solid var(--rule-strong); }
+.sent.ok { background: var(--ok-wash); }
+.sent.err { background: var(--err-wash); border-color: var(--err); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+.inbox .wrap { padding-block: 3rem 4rem; display: grid; gap: 1rem; }
+.inbox h2 { font-size: 1.6rem; }
+.inbox-hint { color: var(--muted); font-size: 0.92rem; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--rule); background: var(--card); }
+.inbox table { width: 100%; border-collapse: collapse; font-size: 0.88rem; min-width: 820px; }
+.inbox th, .inbox td { text-align: left; padding: 0.75rem 0.9rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.inbox th { font-weight: 600; color: var(--muted); font-size: 0.8rem; }
+.inbox td.when { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.inbox td.msg { max-width: 320px; white-space: pre-wrap; }
+
+/* Footer: velvet */
+footer.site { background: var(--velvet); color: var(--on-velvet-muted); font-size: 0.92rem; }
+footer.site .wrap { display: grid; grid-template-columns: 1.6fr repeat(3, 1fr); gap: 2rem; padding-block: 3.5rem 2rem; }
+@media (max-width: 760px) { footer.site .wrap { grid-template-columns: 1fr 1fr; } footer.site .about-col { grid-column: 1 / -1; } }
+footer.site .about-col { display: grid; gap: 1rem; align-content: start; max-width: 34ch; }
+footer.site .logo, footer.site .wm span { color: var(--on-velvet); }
+footer.site h2 { font-family: var(--f-text); color: var(--on-velvet); font-size: 0.88rem; font-weight: 650; margin: 0 0 0.8rem; }
+footer.site ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
+footer.site a, footer.site .linkish { color: inherit; text-decoration: none; }
+footer.site a:hover, footer.site .linkish:hover { color: var(--on-velvet); }
+.legal { grid-column: 1 / -1; border-top: 1px solid rgba(201,174,120,.3); padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; font-size: 0.86rem; }
+
+/* Legal dialogs + cookie notice */
+dialog.legal-doc { width: min(760px, calc(100% - 32px)); max-height: calc(100% - 48px); padding: 0; border: 1px solid var(--brass); border-radius: 0; background: var(--card); color: var(--ink); box-shadow: 0 30px 60px -30px rgba(0,0,0,.45); }
+dialog.legal-doc::backdrop { background: rgba(17,27,48,.45); }
+.legal-head { position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.1rem 1.5rem; background: var(--card); border-bottom: 1px solid var(--rule); }
+.legal-head h2 { font-size: 1.7rem; }
+.x { font: 600 0.88rem/1 var(--f-text); padding: 0.6rem 0.95rem; border: 1px solid var(--rule-strong); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; }
+.legal-body { padding: 1.25rem 1.5rem 2rem; font-size: 0.95rem; }
+.legal-body > div { display: grid; gap: 0.9rem; }
+.legal-body h3 { font-size: 1rem; margin-top: 0.6rem; }
+.legal-body p { color: var(--muted); max-width: 68ch; }
+.legal-body strong { color: var(--ink); font-weight: 600; }
+.legal-body dl { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 0.55rem 1.25rem; margin: 0; }
+.legal-body dt { font-weight: 600; }
+.legal-body dd { margin: 0; color: var(--muted); overflow-wrap: anywhere; }
+.legal-body ul { margin: 0; padding-left: 1.2rem; color: var(--muted); display: grid; gap: 0.3rem; max-width: 68ch; }
+@media (max-width: 560px) { .legal-body dl { grid-template-columns: 1fr; gap: 0.15rem; } .legal-body dd { margin-bottom: 0.6rem; } }
+mark { background: color-mix(in srgb, var(--brass) 22%, transparent); color: var(--ink); padding: 0 0.2em; }
+.draft-note { font-size: 0.8rem !important; padding: 0.6rem 0.8rem; border: 1px dashed var(--muted); }
+.cookie-bar { position: fixed; z-index: 30; left: max(16px, env(safe-area-inset-left, 0px)); right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); max-width: 620px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem 1.25rem; padding: 0.9rem 1rem 0.9rem 1.25rem; background: var(--card); color: var(--ink); border: 1px solid var(--brass); box-shadow: 0 18px 40px -20px rgba(17,27,48,.4); font-size: 0.92rem; }
+.cookie-bar p { flex: 1 1 260px; min-width: 0; }
+.cookie-actions { display: flex; align-items: center; gap: 1rem; }
+.cookie-actions .btn { padding: 0.6rem 1.1rem; }
+
+.table { padding-block: 5.5rem 0; }
+.open { max-width: 980px; margin: 0 auto; display: grid; justify-items: center; text-align: center; gap: 1.5rem; }
+.open h1 { font-family: var(--f-display); font-weight: 400; font-size: clamp(2.8rem, 7vw, 6.2rem); line-height: 1.0; letter-spacing: -0.01em; max-width: 13ch; }
+.open h1 em { font-style: normal; color: var(--blue-text); }
+.open .lede { font-size: 1.35rem; }
+.open .note { font-size: 0.92rem; color: var(--muted); }
+.open .ornament { width: min(420px, 80%); }
+@media (max-width: 640px) { .table { padding-block: 2.5rem 0; } .open .pick .btn { width: 100%; } .open .pick { width: 100%; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><linearGradient id="drp-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1A2B4F"/><stop offset="1" stop-color="#0E1A33"/></linearGradient></defs>
+  <symbol id="drp-mark" viewBox="0 0 40 40"><path d="M6 6h19v6.5H12.5V25H6Z" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M34 34H15v-6.5h12.5V15H34Z" style="fill:var(--cta);stroke:var(--cta)" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="currentColor" opacity=".15"/><path d="M6 10.5l2.5 2.5L14 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 20 20"><path d="M10 2l6 2.5v5c0 4-2.6 6.8-6 8.5-3.4-1.7-6-4.5-6-8.5v-5L10 2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7 10l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 20 20"><path d="M3 5h8M7 3v2M5 5c0 4 3 7 6 8M9 5c0 3-2 6-6 8M11 17l3.5-8L18 17M12.2 14.5h4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 20 20"><rect x="4" y="9" width="12" height="8" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7 9V6.5a3 3 0 016 0V9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 20 20"><path d="M3 15l4-5 3 3 6-8M12 5h4v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-search" viewBox="0 0 20 20"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12.5 12.5L17 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 20 20"><path d="M3 4.5h10a1.5 1.5 0 011.5 1.5v6A1.5 1.5 0 0113 13.5H8l-3.5 3v-3H3A1.5 1.5 0 011.5 12V6A1.5 1.5 0 013 4.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M14.5 8H17a1.5 1.5 0 011.5 1.5v5A1.5 1.5 0 0117 16h-1v2.5L13 16h-2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 20 20"><circle cx="10" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 2.5v2.2M10 15.3v2.2M2.5 10h2.2M15.3 10h2.2M4.7 4.7l1.6 1.6M13.7 13.7l1.6 1.6M4.7 15.3l1.6-1.6M13.7 6.3l1.6-1.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-car" viewBox="0 0 20 20"><path d="M3 12l1.6-4.2A2 2 0 016.5 6.5h7a2 2 0 011.9 1.3L17 12v3H3v-3zM3 12h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="6.5" cy="15" r="1.4" fill="currentColor"/><circle cx="13.5" cy="15" r="1.4" fill="currentColor"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 20 20"><rect x="5" y="5" width="10" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 2.5v2.5M12 2.5v2.5M8 15v2.5M12 15v2.5M2.5 8h2.5M2.5 12h2.5M15 8h2.5M15 12h2.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 20 20"><path d="M10 2.5s5 5.4 5 9a5 5 0 01-10 0c0-3.6 5-9 5-9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cog2" viewBox="0 0 20 20"><path d="M3 16h14M5 16V9l4-3v3l4-3v3l2-1.5V16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-box" viewBox="0 0 20 20"><path d="M3 6.5L10 3l7 3.5v7L10 17l-7-3.5v-7zM3 6.5L10 10l7-3.5M10 10v7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 20 20"><path d="M8 2.5h4M8.5 2.5v5L4 15.5A1.3 1.3 0 005.2 17.5h9.6a1.3 1.3 0 001.2-2L11.5 7.5v-5M6.5 12.5h7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 20 20"><path d="M2.5 5.5h9v8h-9zM11.5 8.5h3.5l2.5 2.7v2.3h-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="6" cy="14.5" r="1.5" fill="var(--surface)" stroke="currentColor" stroke-width="1.6"/><circle cx="14.5" cy="14.5" r="1.5" fill="var(--surface)" stroke="currentColor" stroke-width="1.6"/></symbol>
+</svg>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#home" aria-label="FORA Partners, home"><svg class="mark" aria-hidden="true"><use href="#drp-mark"/></svg><span class="wm"><b>FORA</b><span>PARTNERS</span></span></a>
+    <nav class="main" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#about">About us</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="head-right">
+      <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="de" aria-pressed="false">DE</button><button type="button" data-lang="hu" aria-pressed="false">HU</button></div>
+      <a class="btn btn-primary" href="#contact" data-role-link="supplier">Request a match</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="table" id="home">
+    <div class="wrap">
+      <div class="open">
+        <h1>The shortest way to the <em>right partner</em>.</h1>
+        <p class="lede">We connect suppliers with retailers.</p>
+        <div class="ornament" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M6 6h19v6.5H12.5V25H6Z" fill="currentColor"/><path d="M34 34H15v-6.5h12.5V15H34Z" fill="currentColor"/></svg></div>
+        <div class="pick">
+          <a class="btn btn-primary" href="#contact" data-role-link="supplier">I'm a supplier <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#contact" data-role-link="buyer">I'm a retailer</a>
+        </div>
+        <p class="note">We reply within one business day.</p>
+      </div>
+      <div class="places">
+        <article class="place"><div class="place-in">
+          <h2>For suppliers</h2>
+          <p>You have the products. We find the retailers who are looking for them.</p>
+          <ul>
+            <li>A clear profile of your products and capacity</li>
+            <li>Introductions only to retailers that fit</li>
+            <li>Help with language and first meetings</li>
+            <li>Support until the first order</li>
+          </ul>
+          <a class="go" href="#contact" data-role-link="supplier">Find retailers <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </article>
+        <article class="place"><div class="place-in">
+          <h2>For retailers</h2>
+          <p>You need products. We bring you a short list of checked suppliers.</p>
+          <ul>
+            <li>One short briefing call</li>
+            <li>Suppliers checked before you meet them</li>
+            <li>A short list of three to five options</li>
+            <li>We join the first calls if you want</li>
+          </ul>
+          <a class="go" href="#contact" data-role-link="buyer">Find suppliers <svg aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block menu" id="services">
+    <div class="wrap">
+      <div class="sec-head center">
+        <h2>One partner for the whole search.</h2>
+        <p>Everything between your first call and your first order, handled by the same two people.</p>
+      </div>
+      <div class="double" aria-hidden="true"></div>
+      <div class="menu-list">
+        <div class="dish"><h3>Retailer search</h3><p>We find retailers whose range and customers match your products.</p></div>
+        <div class="dish"><h3>Partner checks</h3><p>We check documents, references and capacity, so both sides can trust the match.</p></div>
+        <div class="dish"><h3>Introductions</h3><p>We arrange the first calls and meetings, and can join them.</p></div>
+        <div class="dish"><h3>Language and follow-up</h3><p>We work in German, Hungarian and English, and stay involved until the first order.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>From first call to first order.</h2>
+      </div>
+      <ol class="visit">
+        <li><span class="saucer" aria-hidden="true">1</span><h3>Getting to know you</h3><p>One short call about your products and goals.</p></li>
+        <li><span class="saucer" aria-hidden="true">2</span><h3>Shortlist</h3><p>We search, check and shortlist the best matches.</p></li>
+        <li><span class="saucer" aria-hidden="true">3</span><h3>First meeting</h3><p>We set up the first meetings and join them if you want.</p></li>
+        <li><span class="saucer" aria-hidden="true">4</span><h3>First order</h3><p>We stay involved until the first order.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block soft" id="about">
+    <div class="wrap">
+      <div class="paper">
+        <div class="masthead">
+          <h2>Two founders, one clear idea.</h2>
+          <span>Latin for meeting places</span>
+          <div class="double" aria-hidden="true"></div>
+        </div>
+        <div class="columns">
+          <p>FORA Partners was founded by two business partners who know the same problem from both sides. Good suppliers struggle to get in front of the right retailers, and retailers spend too much time looking for reliable suppliers.</p>
+          <p>We want to make that first step simple. We listen first, search carefully and only introduce partners who really fit. From the first call to the first order, you always deal with one of the two founders.</p>
+          <p>The name FORA comes from the Latin word for meeting places. That is what we want to be: the place where the right partners meet.</p>
+        </div>
+        <ul class="values">
+          <li><h3>Personal</h3><p>You always speak to one of the founders, never to a call centre.</p></li>
+          <li><h3>Careful</h3><p>We check partners before we introduce them, so your time is not wasted.</p></li>
+          <li><h3>Open</h3><p>We work across industries and countries, in German, Hungarian and English.</p></li>
+          <li><h3>Clear</h3><p>You get a clear offer before we start, with no obligation.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="faq">
+    <div class="wrap faq-wrap">
+      <div class="sec-head">
+        <h2>Questions we often hear.</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Who do you work with?</summary><p>Suppliers who want to sell to retailers, and retailers looking for new suppliers. We are not limited to one industry or country.</p></details>
+        <details><summary>How do you find the right retailers?</summary><p>We start from your products, prices and capacity, then look for retailers whose range and customers fit. We contact them first and only introduce you when there is real interest.</p></details>
+        <details><summary>How long does it take?</summary><p>Most suppliers get their first introductions within a few weeks. It depends on the product and the market.</p></details>
+        <details><summary>What does it cost?</summary><p>It depends on the scope. After a short briefing call you get a clear offer, with no obligation.</p></details>
+        <details><summary>Is my information kept confidential?</summary><p>Yes. We only share your details with partners you approve, and we sign an NDA on request.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block soft contact" id="contact">
+    <div class="wrap">
+      <div class="contact-copy">
+        <h2>Tell us about your products. We'll find the retailers.</h2>
+        <p class="lede">We reply within one business day to set up a short briefing call.</p>
+        <ul class="checks">
+          <li>No obligation to start</li>
+          <li>Your details stay confidential</li>
+          <li>We speak German, Hungarian and English</li>
+        </ul>
+        <a class="mail" href="mailto:contact@forapartners.eu">contact@forapartners.eu</a>
+      </div>
+      <form class="match" id="match-form" novalidate><div class="form-in">
+        <div class="seg" role="radiogroup" aria-label="I am">
+          <input type="radio" name="role" id="role-supplier" value="supplier" checked><label for="role-supplier">I'm a supplier</label>
+          <input type="radio" name="role" id="role-buyer" value="buyer"><label for="role-buyer">I'm a retailer</label>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="f-name">Full name</label><input id="f-name" autocomplete="name" required></div>
+          <div class="field"><label for="f-company">Company</label><input id="f-company" autocomplete="organization" required></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="f-email">Work email</label><input id="f-email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="f-country">Country <span class="opt">(optional)</span></label><input id="f-country" autocomplete="country-name"></div>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" tabindex="-1" autocomplete="off"></div>
+        <div class="field"><label for="f-industry">Product category <span class="opt">(optional)</span></label><input id="f-industry" placeholder="e.g. food, cosmetics, household goods"></div>
+        <div class="field"><label for="f-details" id="details-label">What do you offer?</label><textarea id="f-details" placeholder="Products, volumes, certifications and capacity"></textarea></div>
+        <label class="consent" for="f-consent"><input type="checkbox" id="f-consent" required><span><span>I agree that my details are processed to handle my request.</span> <button type="button" class="linkish" data-open="dlg-privacy">Privacy policy</button></span></label>
+        <div class="form-foot">
+          <small>We reply within one business day. Your request goes straight to our team.</small>
+          <button class="btn btn-primary" type="submit" id="submit-btn">Send request <svg><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="sent" id="sent" role="status" hidden></div>
+      </div></form>
+    </div>
+  </section>
+  <section class="inbox" id="inbox" hidden>
+    <div class="wrap">
+      <h2>Received requests</h2>
+      <p class="inbox-hint">Only you can see this list. Visitors don't see it.</p>
+      <p class="inbox-hint" id="inbox-empty">No requests yet. Send one with the form above to try it.</p>
+      <div class="table-wrap" id="inbox-table" hidden>
+        <table>
+          <thead><tr><th>Date</th><th>Type</th><th>Name</th><th>Company</th><th>Email</th><th>Country</th><th>Product category</th><th>Message</th></tr></thead>
+          <tbody id="inbox-rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="about-col">
+      <a class="logo" href="#home" aria-label="FORA Partners"><svg class="mark" aria-hidden="true"><use href="#drp-mark"/></svg><span class="wm"><b>FORA</b><span>PARTNERS</span></span></a>
+      <p>B2B matchmaking between suppliers and retailers.</p>
+    </div>
+    <div><h2>Company</h2><ul><li><a href="#about">About us</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+    <div><h2>Services</h2><ul><li><a href="#home">For suppliers</a></li><li><a href="#home">For retailers</a></li><li><a href="#process">Process</a></li></ul></div>
+    <div><h2>Contact</h2><ul><li><a href="#contact">Request a match</a></li><li><a href="mailto:contact@forapartners.eu">contact@forapartners.eu</a></li></ul></div>
+    <div class="legal"><span>© 2026 <span data-brand>FORA Partners</span></span><span><button type="button" class="linkish" data-open="dlg-imprint">Imprint</button> · <button type="button" class="linkish" data-open="dlg-privacy">Privacy policy</button></span></div>
+  </div>
+</footer>
+
+
+
+<dialog class="legal-doc" id="dlg-imprint" aria-labelledby="imprint-title">
+  <div class="legal-head"><h2 id="imprint-title">Imprint</h2><button type="button" class="x" data-close>Close</button></div>
+  <div class="legal-body">
+    <div data-lang-block="en">
+      <p>Information pursuant to § 5 E-Commerce Act (ECG), § 63 Trade Act (GewO) and § 25 Media Act (MedienG).</p>
+      <dl>
+        <dt>Operator</dt><dd>Levente Richárd Fónai, sole trader, trading as FORA Partners</dd>
+        <dt>Founders</dt><dd>Levente Richárd Fónai<br>Nándor Rada</dd>
+        <dt>Address</dt><dd>Schönburgstraße 7/10, 1040 Vienna, Austria</dd>
+        <dt>Email</dt><dd><a href="mailto:contact@forapartners.eu">contact@forapartners.eu</a></dd>
+        <dt>Trade licence</dt><dd>Handelsagent (commercial agent), free trade, GISA number 40282466, since 22 October 2026</dd>
+        <dt>Trade authority</dt><dd>Magistrat der Stadt Wien, Magistratisches Bezirksamt für den 4. und 5. Bezirk</dd>
+        <dt>Chamber</dt><dd>Wirtschaftskammer Wien (Vienna Economic Chamber)</dd>
+        <dt>Applicable rules</dt><dd>Gewerbeordnung (GewO), available at www.ris.bka.gv.at</dd>
+        <dt>Company register</dt><dd>Not entered in the company register (Firmenbuch)</dd>
+        <dt>Hosting provider</dt><dd>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (GitHub Pages)</dd>
+        <dt>Media owner and publisher</dt><dd>Levente Richárd Fónai, Schönburgstraße 7/10, 1040 Vienna, Austria. Editorial line: information about FORA Partners and its services.</dd>
+      </dl>
+    </div>
+    <div data-lang-block="de">
+      <p>Angaben gemäß § 5 ECG, § 63 GewO und § 25 MedienG.</p>
+      <dl>
+        <dt>Betreiber</dt><dd>Levente Richárd Fónai, Einzelunternehmer, tätig unter der Bezeichnung FORA Partners</dd>
+        <dt>Gründer</dt><dd>Levente Richárd Fónai<br>Nándor Rada</dd>
+        <dt>Anschrift</dt><dd>Schönburgstraße 7/10, 1040 Wien, Österreich</dd>
+        <dt>E-Mail</dt><dd><a href="mailto:contact@forapartners.eu">contact@forapartners.eu</a></dd>
+        <dt>Gewerbe</dt><dd>Handelsagent, freies Gewerbe, GISA-Zahl 40282466, seit 22.10.2026</dd>
+        <dt>Gewerbebehörde</dt><dd>Magistrat der Stadt Wien, Magistratisches Bezirksamt für den 4. und 5. Bezirk</dd>
+        <dt>Kammer</dt><dd>Wirtschaftskammer Wien</dd>
+        <dt>Berufsrecht</dt><dd>Gewerbeordnung (GewO), abrufbar unter www.ris.bka.gv.at</dd>
+        <dt>Firmenbuch</dt><dd>Nicht im Firmenbuch eingetragen</dd>
+        <dt>Hosting-Anbieter</dt><dd>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (GitHub Pages)</dd>
+        <dt>Medieninhaber und Herausgeber</dt><dd>Levente Richárd Fónai, Schönburgstraße 7/10, 1040 Wien, Österreich. Blattlinie: Information über FORA Partners und seine Leistungen.</dd>
+      </dl>
+    </div>
+    <div data-lang-block="hu">
+      <p>Az osztrák ECG 5. §, GewO 63. § és MedienG 25. § szerinti adatok.</p>
+      <dl>
+        <dt>Üzemeltető</dt><dd>Fónai Levente Richárd egyéni vállalkozó, FORA Partners néven</dd>
+        <dt>Alapítók</dt><dd>Fónai Levente Richárd<br>Rada Nándor</dd>
+        <dt>Cím</dt><dd>Schönburgstraße 7/10, 1040 Bécs, Ausztria</dd>
+        <dt>E-mail</dt><dd><a href="mailto:contact@forapartners.eu">contact@forapartners.eu</a></dd>
+        <dt>Iparengedély</dt><dd>Handelsagent (kereskedelmi ügynök), szabad ipar, GISA-szám: 40282466, 2026. október 22. óta</dd>
+        <dt>Iparhatóság</dt><dd>Magistrat der Stadt Wien, Magistratisches Bezirksamt für den 4. und 5. Bezirk</dd>
+        <dt>Kamara</dt><dd>Wirtschaftskammer Wien (Bécsi Gazdasági Kamara)</dd>
+        <dt>Irányadó szabályok</dt><dd>Gewerbeordnung (GewO), elérhető: www.ris.bka.gv.at</dd>
+        <dt>Cégjegyzék</dt><dd>Nincs bejegyezve az osztrák cégjegyzékbe (Firmenbuch)</dd>
+        <dt>Tárhelyszolgáltató</dt><dd>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (GitHub Pages)</dd>
+        <dt>Médiatulajdonos és kiadó</dt><dd>Fónai Levente Richárd, Schönburgstraße 7/10, 1040 Bécs, Ausztria. Tartalmi irányvonal: tájékoztatás a FORA Partnersről és szolgáltatásairól.</dd>
+      </dl>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="legal-doc" id="dlg-privacy" aria-labelledby="privacy-title">
+  <div class="legal-head"><h2 id="privacy-title">Privacy policy</h2><button type="button" class="x" data-close>Close</button></div>
+  <div class="legal-body">
+    <div data-lang-block="en">
+      <p>Last updated: 4 November 2026</p>
+      <h3>1. Who is responsible</h3>
+      <p>Levente Richárd Fónai, sole trader, trading as FORA Partners, Schönburgstraße 7/10, 1040 Vienna, Austria, <a href="mailto:contact@forapartners.eu">contact@forapartners.eu</a>. Both founders, Levente Richárd Fónai and Nándor Rada, handle requests, and you can contact either of them about your data.</p>
+      <h3>2. What we process and why</h3>
+      <p><strong>Match requests.</strong> When you send the form we process your name, company, work email, country, product category and the details you enter. The form service Web3Forms forwards your request to us by email. We use the data to answer your request and prepare a possible match (Art. 6(1)(b) GDPR, steps before a contract) and for our legitimate interest in business communication (Art. 6(1)(f) GDPR). Without these details we cannot handle your request.</p>
+      <p><strong>Introductions.</strong> We pass your details to a potential partner only after you agree to that specific introduction (Art. 6(1)(a) GDPR). You can withdraw this consent at any time with effect for the future.</p>
+      <p><strong>Hosting.</strong> The site runs on GitHub Pages. When you visit, GitHub processes technical data such as your IP address, time of access and browser type to deliver the site and protect it from attacks (Art. 6(1)(f) GDPR). We do not receive these logs. GitHub's privacy statement applies to them.</p>
+      <p><strong>Fonts.</strong> The fonts are stored on our own site. Your browser does not connect to Google or any other font service.</p>
+      <h3>3. Who receives data</h3>
+      <ul>
+        <li>GitHub, Inc., USA, as hosting provider.</li>
+        <li>Web3Forms, India, as form service. It uses Amazon Web Services and Cloudflare for its servers and spam filtering.</li>
+        <li>The provider of our mailbox contact@forapartners.eu, where your request arrives.</li>
+        <li>A potential business partner, only with your consent as described above.</li>
+      </ul>
+      <p>We never sell your data and never use it for advertising.</p>
+      <h3>4. Transfers outside the EU</h3>
+      <p>GitHub (USA) and Web3Forms (India) process data outside the EU/EEA. For GitHub this is covered by the EU-US Data Privacy Framework and standard contractual clauses. For Web3Forms it is covered by its data processing agreement with standard contractual clauses of the European Commission.</p>
+      <h3>5. How long we keep data</h3>
+      <p>Requests that don't lead to a contract are deleted 24 months after our last contact. We delete the copy at Web3Forms at the same time, and Web3Forms deletes it after 3 years at the latest. Contract and accounting records are kept as long as the law requires (Austria: 7 years, Hungary: 8 years).</p>
+      <h3>6. Your rights</h3>
+      <p>You can ask for access, correction, deletion, restriction or a copy of your data, object to processing based on legitimate interest, and withdraw consent at any time. Write to the email address in the Imprint. We answer within one month.</p>
+      <h3>7. Complaints</h3>
+      <p>You can complain to a data protection authority. Austria: Datenschutzbehörde, Barichgasse 40–42, 1030 Vienna, www.dsb.gv.at. Hungary: Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH), Falk Miksa utca 9–11, 1055 Budapest, www.naih.hu.</p>
+      <h3>8. Cookies and local storage</h3>
+      <p>We use no tracking, advertising or analytics cookies, and no social media plugins, videos or maps. Your browser only stores your language choice and that you have seen the cookie notice. This is technically necessary and needs no consent. If we add analytics later, we will ask for your consent first.</p>
+      <h3>9. Changes</h3>
+      <p>We update this policy when our services or the law change. The date at the top shows the current version.</p>
+    </div>
+    <div data-lang-block="de">
+      <p>Stand: 4. November 2026</p>
+      <h3>1. Verantwortliche</h3>
+      <p>Levente Richárd Fónai, Einzelunternehmer, tätig unter der Bezeichnung FORA Partners, Schönburgstraße 7/10, 1040 Wien, Österreich, <a href="mailto:contact@forapartners.eu">contact@forapartners.eu</a>. Beide Gründer, Levente Richárd Fónai und Nándor Rada, bearbeiten Anfragen. Sie können sich zu Ihren Daten an jeden der beiden wenden.</p>
+      <h3>2. Welche Daten wir verarbeiten und warum</h3>
+      <p><strong>Anfragen.</strong> Wenn Sie das Formular absenden, verarbeiten wir Ihren Namen, Ihr Unternehmen, Ihre geschäftliche E-Mail-Adresse, Ihr Land, Ihre Produktkategorie und Ihre Angaben. Der Formulardienst Web3Forms leitet Ihre Anfrage per E-Mail an uns weiter. Wir nutzen die Daten, um Ihre Anfrage zu beantworten und einen möglichen Kontakt vorzubereiten (Art. 6 Abs. 1 lit. b DSGVO, vorvertragliche Maßnahmen) sowie aus unserem berechtigten Interesse an geschäftlicher Kommunikation (Art. 6 Abs. 1 lit. f DSGVO). Ohne diese Angaben können wir Ihre Anfrage nicht bearbeiten.</p>
+      <p><strong>Vorstellungen.</strong> Wir geben Ihre Daten erst an einen möglichen Partner weiter, wenn Sie dieser konkreten Vorstellung zustimmen (Art. 6 Abs. 1 lit. a DSGVO). Sie können diese Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen.</p>
+      <p><strong>Hosting.</strong> Die Website läuft auf GitHub Pages. Bei Ihrem Besuch verarbeitet GitHub technische Daten wie IP-Adresse, Zugriffszeit und Browsertyp, um die Seite auszuliefern und vor Angriffen zu schützen (Art. 6 Abs. 1 lit. f DSGVO). Wir erhalten diese Protokolle nicht. Für sie gilt die Datenschutzerklärung von GitHub.</p>
+      <p><strong>Schriften.</strong> Die Schriften liegen auf unserer eigenen Website. Ihr Browser verbindet sich nicht mit Google oder einem anderen Schriftendienst.</p>
+      <h3>3. Empfänger</h3>
+      <ul>
+        <li>GitHub, Inc., USA, als Hosting-Anbieter.</li>
+        <li>Web3Forms, Indien, als Formulardienst. Web3Forms nutzt Amazon Web Services und Cloudflare für Server und Spamschutz.</li>
+        <li>Der Anbieter unseres Postfachs contact@forapartners.eu, in dem Ihre Anfrage eingeht.</li>
+        <li>Ein möglicher Geschäftspartner, nur mit Ihrer Einwilligung wie oben beschrieben.</li>
+      </ul>
+      <p>Wir verkaufen Ihre Daten nie und nutzen sie nicht für Werbung.</p>
+      <h3>4. Übermittlung außerhalb der EU</h3>
+      <p>GitHub (USA) und Web3Forms (Indien) verarbeiten Daten außerhalb der EU/des EWR. Für GitHub gilt das EU-US Data Privacy Framework sowie Standardvertragsklauseln. Für Web3Forms gilt dessen Auftragsverarbeitungsvertrag mit Standardvertragsklauseln der EU-Kommission.</p>
+      <h3>5. Speicherdauer</h3>
+      <p>Anfragen, aus denen kein Vertrag entsteht, löschen wir 24 Monate nach dem letzten Kontakt. Die Kopie bei Web3Forms löschen wir zur selben Zeit, Web3Forms löscht sie spätestens nach 3 Jahren. Vertrags- und Buchhaltungsunterlagen bewahren wir so lange auf, wie es das Gesetz verlangt (Österreich: 7 Jahre, Ungarn: 8 Jahre).</p>
+      <h3>6. Ihre Rechte</h3>
+      <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und Datenübertragbarkeit, auf Widerspruch gegen Verarbeitungen aus berechtigtem Interesse und auf jederzeitigen Widerruf Ihrer Einwilligung. Schreiben Sie an die E-Mail-Adresse im Impressum. Wir antworten innerhalb eines Monats.</p>
+      <h3>7. Beschwerde</h3>
+      <p>Sie können sich bei einer Datenschutzbehörde beschweren. Österreich: Datenschutzbehörde, Barichgasse 40–42, 1030 Wien, www.dsb.gv.at. Ungarn: Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH), Falk Miksa utca 9–11, 1055 Budapest, www.naih.hu.</p>
+      <h3>8. Cookies und lokaler Speicher</h3>
+      <p>Wir verwenden keine Tracking-, Werbe- oder Analyse-Cookies und keine Social-Media-Plugins, Videos oder Karten. Ihr Browser speichert nur Ihre Sprachwahl und dass Sie den Cookie-Hinweis gesehen haben. Das ist technisch notwendig und braucht keine Einwilligung. Sollten wir später Analysen einsetzen, fragen wir Sie vorher um Erlaubnis.</p>
+      <h3>9. Änderungen</h3>
+      <p>Wir passen diese Erklärung an, wenn sich unsere Leistungen oder die Rechtslage ändern. Das Datum oben zeigt die aktuelle Fassung.</p>
+    </div>
+    <div data-lang-block="hu">
+      <p>Hatályos: 2026. november 4.</p>
+      <h3>1. Ki felel az adatkezelésért</h3>
+      <p>Fónai Levente Richárd egyéni vállalkozó, FORA Partners néven, Schönburgstraße 7/10, 1040 Bécs, Ausztria, <a href="mailto:contact@forapartners.eu">contact@forapartners.eu</a>. A megkereséseket mindkét alapító, Fónai Levente Richárd és Rada Nándor kezeli, adataival kapcsolatban bármelyikükhöz fordulhat.</p>
+      <h3>2. Milyen adatokat kezelünk és miért</h3>
+      <p><strong>Megkeresések.</strong> Ha elküldi az űrlapot, kezeljük a nevét, cégét, céges e-mail-címét, országát, termékkategóriáját és a megadott részleteket. Az űrlapszolgáltató Web3Forms e-mailben továbbítja hozzánk a megkeresést. Az adatokat a megkeresés megválaszolására és egy lehetséges kapcsolat előkészítésére használjuk (GDPR 6. cikk (1) b), szerződést megelőző lépések), valamint az üzleti kommunikációhoz fűződő jogos érdekünk alapján (GDPR 6. cikk (1) f)). Ezek nélkül nem tudjuk kezelni a megkeresését.</p>
+      <p><strong>Bemutatás.</strong> Adatait csak akkor adjuk át egy lehetséges partnernek, ha az adott bemutatáshoz hozzájárul (GDPR 6. cikk (1) a)). Hozzájárulását bármikor, a jövőre nézve visszavonhatja.</p>
+      <p><strong>Tárhely.</strong> Az oldal a GitHub Pages szolgáltatáson fut. Látogatáskor a GitHub technikai adatokat kezel, például IP-címet, a hozzáférés idejét és a böngésző típusát, hogy kiszolgálja az oldalt és megvédje a támadásoktól (GDPR 6. cikk (1) f)). Ezeket a naplókat mi nem kapjuk meg. Rájuk a GitHub adatvédelmi nyilatkozata vonatkozik.</p>
+      <p><strong>Betűtípusok.</strong> A betűtípusokat a saját oldalunkon tároljuk. A böngészője nem kapcsolódik a Google-hoz vagy más betűtípus-szolgáltatáshoz.</p>
+      <h3>3. Kik kapják meg az adatokat</h3>
+      <ul>
+        <li>GitHub, Inc., USA, tárhelyszolgáltatóként.</li>
+        <li>Web3Forms, India, űrlapszolgáltatóként. A szervereihez és a spamszűréshez az Amazon Web Services és a Cloudflare szolgáltatásait használja.</li>
+        <li>A contact@forapartners.eu postafiókunk szolgáltatója, ahová a megkeresés érkezik.</li>
+        <li>Egy lehetséges üzleti partner, kizárólag az Ön hozzájárulásával, a fent leírtak szerint.</li>
+      </ul>
+      <p>Adatait soha nem adjuk el, és nem használjuk reklámra.</p>
+      <h3>4. Adattovábbítás az EU-n kívülre</h3>
+      <p>A GitHub (USA) és a Web3Forms (India) az EU/EGT területén kívül kezel adatokat. A GitHub esetében ezt az EU-USA adatvédelmi keretrendszer és általános szerződési feltételek biztosítják. A Web3Forms esetében az adatfeldolgozási szerződése az Európai Bizottság általános szerződési feltételeivel.</p>
+      <h3>5. Meddig őrizzük az adatokat</h3>
+      <p>A szerződéshez nem vezető megkereséseket az utolsó kapcsolatfelvétel után 24 hónappal töröljük. A Web3Formsnál lévő másolatot ugyanekkor töröljük, a Web3Forms pedig legkésőbb 3 év után törli. A szerződéses és számviteli iratokat a jogszabályi ideig őrizzük (Ausztria: 7 év, Magyarország: 8 év).</p>
+      <h3>6. Az Ön jogai</h3>
+      <p>Kérhet hozzáférést, helyesbítést, törlést, korlátozást vagy adathordozhatóságot, tiltakozhat a jogos érdeken alapuló adatkezelés ellen, és bármikor visszavonhatja hozzájárulását. Írjon az Impresszumban megadott e-mail-címre. Egy hónapon belül válaszolunk.</p>
+      <h3>7. Panasz</h3>
+      <p>Panaszt tehet egy adatvédelmi hatóságnál. Ausztria: Datenschutzbehörde, Barichgasse 40–42, 1030 Bécs, www.dsb.gv.at. Magyarország: Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH), Falk Miksa utca 9–11, 1055 Budapest, www.naih.hu.</p>
+      <h3>8. Sütik és helyi tárolás</h3>
+      <p>Nem használunk követő, hirdetési vagy elemző sütiket, sem közösségimédia-bővítményeket, videókat vagy térképeket. A böngészője csak a választott nyelvet és azt tárolja, hogy látta a sütikről szóló tájékoztatást. Ez technikailag szükséges, és nem igényel hozzájárulást. Ha később elemzést vezetnénk be, előbb engedélyt kérünk.</p>
+      <h3>9. Változások</h3>
+      <p>A tájékoztatót frissítjük, ha szolgáltatásaink vagy a jogszabályok változnak. A fenti dátum mutatja az aktuális változatot.</p>
+    </div>
+  </div>
+</dialog>
+
+<div class="cookie-bar" id="cookie-bar" hidden>
+  <p>We only store your language choice in your browser. No tracking or analytics cookies.</p>
+  <div class="cookie-actions"><button type="button" class="linkish" data-open="dlg-privacy">Privacy policy</button><button type="button" class="btn btn-secondary" id="cookie-ok">OK</button></div>
+</div>
+
+<script>
+  // Change the company name in one place.
+  const BRAND = "FORA Partners";
+  document.querySelectorAll("[data-brand]").forEach(el => { el.textContent = BRAND; });
+
+  // Translations: English text -> [German, Hungarian]. Missing entries stay in English.
+  const I18N = {"A table for two: you and the right partner.": ["Ein Tisch für zwei: Sie und der richtige Partner.", "Asztal két főre: Önnek és a megfelelő partnernek."], "Est. 2026 · Vienna": ["Gegründet 2026 · Wien", "Alapítva 2026 · Bécs"], "Any industry": ["Jede Branche", "Bármely iparág"], "Any country": ["Jedes Land", "Bármely ország"], "We reply within one business day.": ["Wir melden uns innerhalb eines Werktags.", "Egy munkanapon belül válaszolunk."], "You have the products. We find the retailers who are looking for them.": ["Sie haben die Produkte. Wir finden die Händler, die danach suchen.", "Önnek megvannak a termékei. Mi megtaláljuk a kereskedőket, akik keresik őket."], "You need products. We bring you a short list of checked suppliers.": ["Sie brauchen Produkte. Wir bringen Ihnen eine kurze Liste geprüfter Lieferanten.", "Termékekre van szüksége? Ellenőrzött beszállítók rövid listáját hozzuk Önnek."], "Latin for meeting places": ["Lateinisch für Treffpunkte", "latinul: találkozóhelyek"], "Everything between your first call and your first order, handled by the same two people.": ["Alles zwischen dem ersten Gespräch und der ersten Bestellung, betreut von denselben zwei Menschen.", "Minden az első beszélgetéstől az első rendelésig, végig ugyanattól a két embertől."], "(optional)": ["(optional)", "(nem kötelező)"], "Home": ["Startseite", "Kezdőlap"], "Main": ["Hauptnavigation", "Főmenü"], "Language": ["Sprache", "Nyelv"], "How it works": ["So funktioniert's", "Így működik"], "Why us": ["Warum wir", "Miért mi"], "Industries": ["Branchen", "Iparágak"], "Process": ["Ablauf", "Folyamat"], "Request a match": ["Anfrage starten", "Partnert keresek"], "Cross-border supplier matchmaking": ["Grenzüberschreitende Lieferantenvermittlung", "Határon átnyúló beszállító-közvetítés"], "Your next supplier is closer than you think.": ["Ihr nächster Lieferant ist näher, als Sie denken.", "A következő beszállítója közelebb van, mint gondolná."], "We'll introduce you.": ["Wir stellen den Kontakt her.", "Mi összekötjük önöket."], "connects Austrian companies with vetted Hungarian manufacturers, and Hungarian suppliers with customers in Austria. We find the right partner, check them, and handle the language and the first conversations.": ["verbindet österreichische Unternehmen mit geprüften ungarischen Herstellern und ungarische Zulieferer mit Kunden in Österreich. Wir finden den passenden Partner, prüfen ihn und übernehmen die Sprache und die ersten Gespräche.", "összeköti az osztrák vállalatokat ellenőrzött magyar gyártókkal, a magyar beszállítókat pedig ausztriai vevőkkel. Megtaláljuk a megfelelő partnert, átvilágítjuk, és mi intézzük a nyelvi akadályokat és az első tárgyalásokat."], "Find a supplier": ["Lieferanten finden", "Beszállítót keresek"], "Find customers in Austria": ["Kunden in Österreich finden", "Vevőket keresek Ausztriában"], "Vienna to Győr": ["Wien bis Győr", "Bécs és Győr között"], "customs borders": ["Zollgrenzen", "vámhatár"], "languages: DE, HU, EN": ["Sprachen: DE, HU, EN", "nyelv: DE, HU, EN"], "Map of example matches between Austria and Hungary": ["Karte mit Beispielvermittlungen zwischen Österreich und Ungarn", "Példa párosítások térképe Ausztria és Magyarország között"], "Example matches": ["Beispielvermittlungen", "Példa párosítások"], "Shortlist ready": ["Shortlist bereit", "A szűkített lista kész"], "Routes from Vienna, Linz and Graz to Győr, Szombathely, Székesfehérvár and Budapest": ["Routen von Wien, Linz und Graz nach Győr, Szombathely, Székesfehérvár und Budapest", "Útvonalak Bécsből, Linzből és Grazból Győrbe, Szombathelyre, Székesfehérvárra és Budapestre"], "AUSTRIA": ["ÖSTERREICH", "AUSZTRIA"], "HUNGARY": ["UNGARN", "MAGYARORSZÁG"], "Vienna": ["Wien", "Bécs"], "Die-cast housings": ["Druckgussgehäuse", "Nyomásos öntésű házak"], "94% fit": ["94 % Passung", "94% egyezés"], "Buyer in Graz · Supplier in Szombathely · IATF 16949 · German-speaking QA": ["Käufer in Graz · Lieferant in Szombathely · IATF 16949 · deutschsprachige QS", "Vevő: Graz · Beszállító: Szombathely · IATF 16949 · németül beszélő minőségbiztosítás"], "Four steps from requirement to introduction.": ["In vier Schritten von der Anforderung zum Kontakt.", "Négy lépés az igénytől a bemutatkozásig."], "Choose your side": ["Wählen Sie Ihre Seite", "Válassza ki, melyik oldalon áll"], "For buyers": ["Für Einkäufer", "Vevőknek"], "For suppliers": ["Für Lieferanten", "Beszállítóknak"], "Share your requirement": ["Bedarf schildern", "Ossza meg az igényét"], "Drawings, volumes, certifications and target price. One 30-minute call in German, Hungarian or English.": ["Zeichnungen, Mengen, Zertifizierungen und Zielpreis. Ein 30-minütiges Gespräch auf Deutsch, Ungarisch oder Englisch.", "Rajzok, mennyiségek, tanúsítványok és célár. Egy 30 perces beszélgetés németül, magyarul vagy angolul."], "We search and vet": ["Wir suchen und prüfen", "Keresünk és ellenőrzünk"], "We screen suppliers across the border and check capacity, certificates, references and financial health.": ["Wir sichten Lieferanten jenseits der Grenze und prüfen Kapazität, Zertifikate, Referenzen und Finanzlage.", "Felkutatjuk a beszállítókat a határ túloldalán, és ellenőrizzük a kapacitást, a tanúsítványokat, a referenciákat és a pénzügyi helyzetet."], "Review your shortlist": ["Shortlist prüfen", "Nézze át a szűkített listát"], "Three to five suppliers, each with a fit score and a clear explanation of why it fits.": ["Drei bis fünf Lieferanten, jeweils mit Passungswert und klarer Begründung.", "Három-öt beszállító, mindegyik egyezési pontszámmal és világos indoklással."], "Meet and quote": ["Kennenlernen und anfragen", "Találkozó és ajánlatkérés"], "We arrange introductions and can join the first calls, plant visits and sample rounds.": ["Wir stellen den Erstkontakt her und begleiten auf Wunsch die ersten Gespräche, Werksbesuche und Musterrunden.", "Megszervezzük a bemutatkozást, és kérésre részt veszünk az első tárgyalásokon, üzemlátogatásokon és mintaköröknél."], "Build your profile": ["Profil anlegen", "Készítse el a profilját"], "Processes, machines, materials, certifications, capacity and the order sizes you want.": ["Verfahren, Maschinen, Werkstoffe, Zertifizierungen, Kapazität und gewünschte Auftragsgrößen.", "Technológiák, gépek, anyagok, tanúsítványok, kapacitás és a kívánt rendelésméret."], "Get verified once": ["Einmal verifizieren lassen", "Egyszeri ellenőrzés"], "We check your documents and references, so Austrian buyers can trust the introduction.": ["Wir prüfen Ihre Unterlagen und Referenzen, damit österreichische Einkäufer dem Kontakt vertrauen können.", "Ellenőrizzük dokumentumait és referenciáit, így az osztrák vevők megbízhatnak a bemutatásban."], "Receive matched enquiries": ["Passende Anfragen erhalten", "Kapjon célzott megkereséseket"], "Only briefs that fit your profile, with the buyer's requirements translated and explained.": ["Nur Anfragen, die zu Ihrem Profil passen, mit übersetzten und erläuterten Anforderungen des Käufers.", "Csak a profiljához illő megkereséseket, a vevő igényeit lefordítva és elmagyarázva."], "Win and grow": ["Aufträge gewinnen und wachsen", "Nyerjen megrendeléseket, növekedjen"], "Quote to serious buyers and keep your profile current as your capacity changes.": ["Bieten Sie ernsthaften Käufern an und halten Sie Ihr Profil aktuell, wenn sich Ihre Kapazität ändert.", "Adjon ajánlatot komoly vevőknek, és frissítse a profilját, ha változik a kapacitása."], "Why": ["Warum", "Miért"], "Two neighbouring markets. One partner who knows both.": ["Zwei Nachbarmärkte. Ein Partner, der beide kennt.", "Két szomszédos piac. Egy partner, aki mindkettőt ismeri."], "Austria and Hungary share a border, an industrial history and the EU single market. What usually holds companies back is language, local networks and trust. That's the part we handle.": ["Österreich und Ungarn teilen eine Grenze, eine industrielle Geschichte und den EU-Binnenmarkt. Was Unternehmen meist bremst, sind Sprache, lokale Netzwerke und Vertrauen. Genau darum kümmern wir uns.", "Ausztriának és Magyarországnak közös a határa, az ipari múltja és az uniós egységes piaca. A cégeket általában a nyelv, a hiányzó helyi kapcsolatok és a bizalom fogja vissza. Ezt a részt mi intézzük."], "Proximity": ["Nähe", "Közelség"], "Nearshoring next door": ["Nearshoring gleich nebenan", "Nearshoring a szomszédban"], "Same-day trucking, no customs, the same time zone. Your supplier is often closer than another plant in your own country.": ["Lieferung am selben Tag, kein Zoll, dieselbe Zeitzone. Ihr Lieferant ist oft näher als ein anderes Werk im eigenen Land.", "Aznapi szállítás, nincs vám, azonos időzóna. A beszállító gyakran közelebb van, mint egy másik üzem a saját országában."], "Approximate road distances": ["Ungefähre Straßenentfernungen", "Hozzávetőleges közúti távolságok"], "Vienna → Sopron": ["Wien → Sopron", "Bécs → Sopron"], "Vienna → Győr": ["Wien → Győr", "Bécs → Győr"], "Vienna → Budapest": ["Wien → Budapest", "Bécs → Budapest"], "German and Hungarian": ["Deutsch und Ungarisch", "Német és magyar"], "We translate requirements, join first calls and explain local business habits on both sides.": ["Wir übersetzen Anforderungen, begleiten erste Gespräche und erklären die Geschäftskultur auf beiden Seiten.", "Lefordítjuk az igényeket, részt veszünk az első tárgyalásokon, és mindkét oldalon elmagyarázzuk a helyi üzleti szokásokat."], "Vetted before you meet": ["Geprüft, bevor Sie sich treffen", "Ellenőrizve, mielőtt találkoznak"], "Certificates, capacity, references and financial health are checked before a name reaches you.": ["Zertifikate, Kapazität, Referenzen und Finanzlage werden geprüft, bevor Sie einen Namen erhalten.", "A tanúsítványokat, a kapacitást, a referenciákat és a pénzügyi helyzetet ellenőrizzük, mielőtt egy név Önhöz kerül."], "Scored on your criteria": ["Bewertet nach Ihren Kriterien", "Az Ön szempontjai szerint értékelve"], "Every match shows how it rates on technical fit, capacity, location and price level.": ["Jeder Vorschlag zeigt, wie er bei technischer Eignung, Kapazität, Standort und Preisniveau abschneidet.", "Minden javaslatnál látszik, hogyan teljesít műszaki alkalmasság, kapacitás, helyszín és árszint szerint."], "Confidential by default": ["Standardmäßig vertraulich", "Alapértelmezetten bizalmas"], "Your name and drawings go only to suppliers you approve, under NDA when needed.": ["Ihr Name und Ihre Zeichnungen gehen nur an Lieferanten, die Sie freigeben, bei Bedarf unter NDA.", "Nevét és rajzait csak az Ön által jóváhagyott beszállítók kapják meg, szükség esetén titoktartási megállapodással."], "Where Austrian demand meets Hungarian capacity.": ["Wo österreichische Nachfrage auf ungarische Kapazität trifft.", "Ahol az osztrák kereslet találkozik a magyar kapacitással."], "Metalworking": ["Metallbearbeitung", "Fémmegmunkálás"], "Casting, forging, CNC machining, sheet metal and welding.": ["Gießen, Schmieden, CNC-Bearbeitung, Blechbearbeitung und Schweißen.", "Öntés, kovácsolás, CNC-megmunkálás, lemezmegmunkálás és hegesztés."], "Automotive": ["Automotive", "Autóipar"], "Tier 2 and Tier 3 components from IATF-certified plants.": ["Tier-2- und Tier-3-Komponenten aus IATF-zertifizierten Werken.", "Tier 2 és Tier 3 alkatrészek IATF-tanúsított üzemekből."], "Electronics": ["Elektronik", "Elektronika"], "PCB assembly, cable harnesses, enclosures and box builds.": ["Leiterplattenbestückung, Kabelbäume, Gehäuse und Box-Build.", "NYÁK-szerelés, kábelkötegek, házak és készülékszerelés."], "Plastics & rubber": ["Kunststoff & Gummi", "Műanyag és gumi"], "Injection moulding, extrusion, tooling and elastomer parts.": ["Spritzguss, Extrusion, Werkzeugbau und Elastomerteile.", "Fröccsöntés, extrudálás, szerszámgyártás és elasztomer alkatrészek."], "Machinery": ["Maschinenbau", "Gépgyártás"], "Subassemblies, hydraulics, drives and spare parts.": ["Baugruppen, Hydraulik, Antriebe und Ersatzteile.", "Részegységek, hidraulika, hajtások és pótalkatrészek."], "Packaging": ["Verpackung", "Csomagolás"], "Corrugated, flexible and custom protective packaging.": ["Wellpappe, flexible und individuelle Schutzverpackungen.", "Hullámkarton, flexibilis és egyedi védőcsomagolás."], "Chemicals & materials": ["Chemie & Werkstoffe", "Vegyipar és alapanyagok"], "Coatings, adhesives, raw materials and toll processing.": ["Beschichtungen, Klebstoffe, Rohstoffe und Lohnfertigung.", "Bevonatok, ragasztók, nyersanyagok és bérgyártás."], "Industrial services": ["Industrielle Dienstleistungen", "Ipari szolgáltatások"], "Logistics, testing labs, maintenance and contract engineering.": ["Logistik, Prüflabore, Instandhaltung und Engineering-Dienstleistungen.", "Logisztika, vizsgálólaborok, karbantartás és mérnöki szolgáltatások."], "From first call to first order.": ["Vom ersten Gespräch bis zur ersten Bestellung.", "Az első beszélgetéstől az első rendelésig."], "A typical buyer engagement. Timings depend on how specialised the part is.": ["Ein typisches Einkaufsprojekt. Die Dauer hängt davon ab, wie speziell das Teil ist.", "Egy tipikus vevői megbízás. Az időtartam attól függ, mennyire speciális az alkatrész."], "Day 1": ["Tag 1", "1. nap"], "Briefing call": ["Briefing-Gespräch", "Egyeztető hívás"], "We agree the specification, must-haves and budget.": ["Wir klären Spezifikation, Muss-Kriterien und Budget.", "Egyeztetjük a specifikációt, az elvárásokat és a keretet."], "Days 2–7": ["Tag 2–7", "2–7. nap"], "Search & screening": ["Suche & Vorauswahl", "Keresés és szűrés"], "Long list built, first checks and capacity questions sent.": ["Longlist erstellt, erste Prüfungen und Kapazitätsanfragen versendet.", "Elkészül a bővebb lista, megtörténnek az első ellenőrzések és kapacitás-egyeztetések."], "Days 7–10": ["Tag 7–10", "7–10. nap"], "Shortlist": ["Vorauswahl", "Előválogatás"], "Three to five scored suppliers, with notes on each.": ["Drei bis fünf bewertete Lieferanten mit Notizen zu jedem.", "Három-öt pontozott beszállító, mindegyikhez megjegyzésekkel."], "Weeks 2–4": ["Woche 2–4", "2–4. hét"], "Introductions & RFQ": ["Vorstellung & Anfrage", "Bemutatkozás és ajánlatkérés"], "Calls, plant visits, quotes and samples.": ["Gespräche, Werksbesuche, Angebote und Muster.", "Hívások, üzemlátogatások, árajánlatok és minták."], "After award": ["Nach der Vergabe", "A megrendelés után"], "Follow-up": ["Nachbetreuung", "Utánkövetés"], "We check in after the first deliveries.": ["Wir melden uns nach den ersten Lieferungen.", "Az első szállítások után ellenőrizzük, minden rendben van-e."], "Client stories": ["Kundenstimmen", "Ügyfeleink mondták"], "Trusted on both sides of the border.": ["Vertrauen auf beiden Seiten der Grenze.", "Bizalom a határ mindkét oldalán."], "Placeholder quotes · replace with real client feedback before launch": ["Platzhalter-Zitate · vor dem Launch durch echtes Kundenfeedback ersetzen", "Helykitöltő idézetek · indulás előtt valódi ügyfélvéleményekre cserélendők"], "\"We had a new supplier for our housings qualified in under a month. Our own search had stalled for a quarter.\"": ["„Wir hatten in weniger als einem Monat einen neuen Lieferanten für unsere Gehäuse qualifiziert. Unsere eigene Suche stockte seit einem Quartal.“", "„Kevesebb mint egy hónap alatt minősítettünk új beszállítót a házainkhoz. A saját keresésünk egy negyedéve elakadt.”"], "Head of Procurement": ["Leitung Einkauf", "Beszerzési vezető"], "HVAC manufacturer, Styria": ["HLK-Hersteller, Steiermark", "HVAC-gyártó, Stájerország"], "\"We had tried to win Austrian customers for years. Every enquiry they brought us was a real project that matched our machines.\"": ["„Wir haben jahrelang versucht, österreichische Kunden zu gewinnen. Jede Anfrage, die sie uns gebracht haben, war ein echtes Projekt, das zu unseren Maschinen passte.“", "„Évekig próbáltunk osztrák vevőket szerezni. Minden megkeresés, amit hoztak, valódi projekt volt, ami illett a gépeinkhez.”"], "Managing Director": ["Geschäftsführer", "Ügyvezető igazgató"], "CNC supplier, Győr-Moson-Sopron": ["CNC-Zulieferer, Győr-Moson-Sopron", "CNC-beszállító, Győr-Moson-Sopron"], "\"The shortlist explained why each supplier fit. That saved our engineers a lot of first calls.\"": ["„Die Shortlist hat erklärt, warum jeder Lieferant passt. Das hat unseren Ingenieuren viele Erstgespräche erspart.“", "„A szűkített lista megindokolta, miért illik egy-egy beszállító. Ezzel a mérnökeink rengeteg első egyeztetést spóroltak meg.”"], "Supply Chain Manager": ["Supply-Chain-Manager", "Ellátásilánc-vezető"], "Machinery OEM, Upper Austria": ["Maschinenbau-OEM, Oberösterreich", "Gépgyártó OEM, Felső-Ausztria"], "Tell us what you need. We'll take it from there.": ["Sagen Sie uns, was Sie brauchen. Den Rest übernehmen wir.", "Mondja el, mire van szüksége. A többit mi intézzük."], "We reply within one business day to set up a short briefing call.": ["Wir melden uns innerhalb eines Werktags für ein kurzes Briefing-Gespräch.", "Egy munkanapon belül jelentkezünk egy rövid egyeztető hívás miatt."], "No obligation and no fee to start": ["Unverbindlich und ohne Startgebühr", "Kötelezettség és induló díj nélkül"], "Your details stay confidential": ["Ihre Daten bleiben vertraulich", "Adatait bizalmasan kezeljük"], "We speak German, Hungarian and English": ["Wir sprechen Deutsch, Ungarisch und Englisch", "Beszélünk németül, magyarul és angolul"], "I am": ["Ich bin", "Én vagyok"], "I'm looking for a supplier": ["Ich suche einen Lieferanten", "Beszállítót keresek"], "I'm a supplier": ["Ich bin Lieferant", "Beszállító vagyok"], "Full name": ["Vollständiger Name", "Teljes név"], "Company": ["Unternehmen", "Cég"], "Work email": ["Geschäftliche E-Mail", "Céges e-mail-cím"], "Country": ["Land", "Ország"], "Austria": ["Österreich", "Ausztria"], "Hungary": ["Ungarn", "Magyarország"], "Other": ["Sonstiges", "Egyéb"], "Industry": ["Branche", "Iparág"], "What are you looking to source?": ["Was möchten Sie beschaffen?", "Mit szeretne beszerezni?"], "Part or service, annual volume, key certifications": ["Teil oder Leistung, Jahresmenge, wichtige Zertifizierungen", "Alkatrész vagy szolgáltatás, éves mennyiség, fontos tanúsítványok"], "What do you make or offer?": ["Was stellen Sie her oder bieten Sie an?", "Mit gyárt vagy kínál?"], "Main processes, materials, certifications and capacity": ["Hauptverfahren, Werkstoffe, Zertifizierungen und Kapazität", "Fő technológiák, anyagok, tanúsítványok és kapacitás"], "Draft site · this form isn't connected yet": ["Entwurf · dieses Formular ist noch nicht verbunden", "Tervezet · az űrlap még nincs bekötve"], "Send request": ["Anfrage senden", "Kérés elküldése"], "Cross-border supplier matchmaking between Austria and Hungary.": ["Grenzüberschreitende Lieferantenvermittlung zwischen Österreich und Ungarn.", "Határon átnyúló beszállító-közvetítés Ausztria és Magyarország között."], "Clients": ["Kunden", "Ügyfelek"], "Services": ["Leistungen", "Szolgáltatások"], "Contact": ["Kontakt", "Kapcsolat"], "Vienna · Győr": ["Wien · Győr", "Bécs · Győr"], "Imprint · Privacy": ["Impressum · Datenschutz", "Impresszum · Adatvédelem"], "Please add your name, company and a valid work email so we can reply.": ["Bitte geben Sie Name, Unternehmen und eine gültige geschäftliche E-Mail an, damit wir antworten können.", "Kérjük, adja meg nevét, cégét és érvényes céges e-mail-címét, hogy válaszolhassunk."], "Thanks, {n}. In the live site this request would go to the {b} team. The form isn't connected yet in this draft.": ["Danke, {n}. Auf der fertigen Website ginge diese Anfrage an das {b}-Team. Im Entwurf ist das Formular noch nicht verbunden.", "Köszönjük, {n}! Az élő oldalon ez a kérés az {b} csapatához kerülne. A tervezetben az űrlap még nincs bekötve."], "Imprint": ["Impressum", "Impresszum"], "Privacy policy": ["Datenschutzerklärung", "Adatvédelmi tájékoztató"], "Close": ["Schließen", "Bezárás"], "I agree that my details are processed to handle my request.": ["Ich stimme zu, dass meine Angaben zur Bearbeitung meiner Anfrage verarbeitet werden.", "Hozzájárulok, hogy adataimat a megkeresésem kezeléséhez feldolgozzák."], "We only store your language choice in your browser. No tracking or analytics cookies.": ["Wir speichern nur Ihre Sprachwahl in Ihrem Browser. Keine Tracking- oder Analyse-Cookies.", "Csak a választott nyelvet tároljuk a böngészőjében. Nincsenek követő vagy elemző sütik."], "OK": ["OK", "Rendben"], "We reply within one business day. Your request goes straight to our team.": ["Wir antworten innerhalb eines Werktags. Ihre Anfrage geht direkt an unser Team.", "Egy munkanapon belül válaszolunk. Kérése közvetlenül a csapatunkhoz kerül."], "Sending…": ["Wird gesendet…", "Küldés…"], "Please confirm that we may process your details.": ["Bitte bestätigen Sie, dass wir Ihre Angaben verarbeiten dürfen.", "Kérjük, erősítse meg, hogy kezelhetjük az adatait."], "Thanks, {n}. Your request has been sent. We'll reply within one business day.": ["Danke, {n}. Ihre Anfrage wurde gesendet. Wir antworten innerhalb eines Werktags.", "Köszönjük, {n}! A kérését elküldtük. Egy munkanapon belül válaszolunk."], "Your request couldn't be sent. Please try again in a moment.": ["Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es gleich noch einmal.", "A kérést nem sikerült elküldeni. Kérjük, próbálja újra egy perc múlva."], "Sending isn't available here. Open the page while signed in to claude.ai, or set a form address for the live site.": ["Senden ist hier nicht verfügbar. Öffnen Sie die Seite angemeldet bei claude.ai oder hinterlegen Sie eine Formularadresse für die Live-Website.", "A küldés itt nem érhető el. Nyissa meg az oldalt claude.ai-ba bejelentkezve, vagy állítson be űrlapcímet az élő oldalhoz."], "Received requests": ["Eingegangene Anfragen", "Beérkezett kérések"], "Only you can see this list. Visitors don't see it.": ["Nur Sie sehen diese Liste. Besucher sehen sie nicht.", "Ezt a listát csak te látod, a látogatók nem."], "No requests yet. Send one with the form above to try it.": ["Noch keine Anfragen. Senden Sie zum Test eine über das Formular oben.", "Még nincs kérés. Próbáld ki a fenti űrlappal."], "Date": ["Datum", "Dátum"], "Type": ["Art", "Típus"], "Name": ["Name", "Név"], "Email": ["E-Mail", "E-mail"], "Message": ["Nachricht", "Üzenet"], "Buyer": ["Einkäufer", "Vevő"], "Supplier": ["Lieferant", "Beszállító"], "3–5": ["3–5", "3–5"], "vetted suppliers per shortlist": ["geprüfte Lieferanten pro Shortlist", "ellenőrzött beszállító listánként"], "7–10 days": ["7–10 Tage", "7–10 nap"], "to your shortlist": ["bis zur Shortlist", "a szűkített listáig"], "Searching alone, or with a partner": ["Allein suchen oder mit einem Partner", "Egyedül keresni vagy partnerrel"], "What changes when we run the search for you.": ["Was sich ändert, wenn wir die Suche für Sie übernehmen.", "Mi változik, ha mi végezzük a keresést?"], "On your own": ["Auf eigene Faust", "Egyedül"], "With us": ["Mit uns", "Velünk"], "Finding suppliers": ["Lieferanten finden", "Beszállítók felkutatása"], "Directory searches and cold emails, many of them unanswered.": ["Verzeichnissuche und Kaltakquise per E-Mail, vieles bleibt unbeantwortet.", "Keresés cégjegyzékekben és hideg e-mailek, sokszor válasz nélkül."], "Three to five suppliers who have already confirmed interest and capacity.": ["Drei bis fünf Lieferanten, die Interesse und Kapazität bereits bestätigt haben.", "Három-öt beszállító, akik már megerősítették az érdeklődésüket és a kapacitásukat."], "Checks": ["Prüfung", "Ellenőrzés"], "Your team checks certificates and references one by one.": ["Ihr Team prüft Zertifikate und Referenzen einzeln.", "A csapata egyenként ellenőrzi a tanúsítványokat és referenciákat."], "Certificates, references and financial health checked before you see a name.": ["Zertifikate, Referenzen und Finanzlage geprüft, bevor Sie einen Namen sehen.", "A tanúsítványokat, referenciákat és a pénzügyi helyzetet ellenőrizzük, mielőtt egy nevet lát."], "Calls, emails and specifications in a second language.": ["Gespräche, E-Mails und Spezifikationen in einer Fremdsprache.", "Hívások, e-mailek és specifikációk idegen nyelven."], "German and Hungarian on both sides, from the first call to the first order.": ["Deutsch und Ungarisch auf beiden Seiten, vom ersten Gespräch bis zum ersten Auftrag.", "Német és magyar mindkét oldalon, az első hívástól az első rendelésig."], "Time to a shortlist": ["Zeit bis zur Shortlist", "Idő a szűkített listáig"], "Often several weeks, alongside daily work.": ["Oft mehrere Wochen, neben dem Tagesgeschäft.", "Gyakran több hét, a napi munka mellett."], "Typically 7–10 days.": ["In der Regel 7–10 Tage.", "Jellemzően 7–10 nap."], "First meetings": ["Erste Treffen", "Első találkozók"], "You organise calls and plant visits yourself.": ["Sie organisieren Gespräche und Werksbesuche selbst.", "A hívásokat és üzemlátogatásokat maga szervezi."], "We arrange calls and plant visits, and can join them.": ["Wir organisieren Gespräche und Werksbesuche und begleiten Sie auf Wunsch.", "Megszervezzük a hívásokat és üzemlátogatásokat, és el is kísérjük."], "Example of a sourcing request": ["Beispiel einer Beschaffungsanfrage", "Példa egy beszerzési megbízásra"], "Sourcing request": ["Beschaffungsanfrage", "Beszerzési megbízás"], "Aluminium die-cast housings": ["Aluminium-Druckgussgehäuse", "Alumínium nyomásos öntésű házak"], "40,000 pcs / year": ["40.000 Stk. / Jahr", "40 000 db / év"], "German-speaking contact": ["Deutschsprachiger Ansprechpartner", "Németül beszélő kapcsolattartó"], "Briefing": ["Briefing", "Egyeztetés"], "Screening": ["Vorauswahl", "Szűrés"], "Introductions": ["Vorstellung", "Bemutatás"], "Supplier A": ["Lieferant A", "A beszállító"], "Supplier B": ["Lieferant B", "B beszállító"], "Supplier C": ["Lieferant C", "C beszállító"], "Die-casting and CNC in house · Western Hungary": ["Druckguss und CNC im Haus · Westungarn", "Saját öntöde és CNC · Nyugat-Magyarország"], "IATF 16949 · spare capacity from Q1": ["IATF 16949 · freie Kapazität ab Q1", "IATF 16949 · szabad kapacitás Q1-től"], "Strong on coating · smaller volumes": ["Stark bei Beschichtung · kleinere Mengen", "Erős felületkezelés · kisebb mennyiségek"], "fit": ["Passung", "egyezés"], "Buyer: HVAC manufacturer, Styria": ["Käufer: HLK-Hersteller, Steiermark", "Vevő: HVAC-gyártó, Stájerország"], "Arrange introductions": ["Vorstellung vereinbaren", "Bemutatás egyeztetése"], "About us": ["Über uns", "Rólunk"], "We connect Austrian buyers with the right Hungarian suppliers.": ["Wir verbinden österreichische Einkäufer mit den richtigen ungarischen Lieferanten.", "Összekötjük az osztrák vevőket a megfelelő magyar beszállítókkal."], "is a matchmaking company for industrial supply chains between Austria and Hungary. We know manufacturers on both sides of the border, speak both languages, and take care of the search, the checks and the first conversations.": ["ist ein Vermittlungsunternehmen für industrielle Lieferketten zwischen Österreich und Ungarn. Wir kennen Hersteller auf beiden Seiten der Grenze, sprechen beide Sprachen und übernehmen Suche, Prüfung und die ersten Gespräche.", "Ausztria és Magyarország közötti ipari ellátási láncokra szakosodott partnerközvetítő cég. Ismerjük a gyártókat a határ mindkét oldalán, beszéljük mindkét nyelvet, és mi intézzük a keresést, az ellenőrzést és az első tárgyalásokat."], "Buyers get a short list of partners who fit. Suppliers get serious enquiries from customers who already need them.": ["Einkäufer erhalten eine kurze Liste passender Partner. Lieferanten erhalten ernsthafte Anfragen von Kunden, die sie bereits brauchen.", "A vevők rövid listát kapnak a hozzájuk illő partnerekről. A beszállítók komoly megkereséseket kapnak olyan vevőktől, akiknek valóban szükségük van rájuk."], "Explore": ["Mehr erfahren", "Tovább"], "See the steps for buyers and suppliers.": ["Die Schritte für Einkäufer und Lieferanten.", "A lépések vevőknek és beszállítóknak."], "What you get compared with searching alone.": ["Was Sie im Vergleich zur eigenen Suche gewinnen.", "Mit nyer ahhoz képest, mintha egyedül keresne."], "The sectors we know best.": ["Die Branchen, die wir am besten kennen.", "Az iparágak, amelyeket a legjobban ismerünk."], "What buyers and suppliers say.": ["Was Einkäufer und Lieferanten sagen.", "Mit mondanak a vevők és a beszállítók."], "Send us your request.": ["Senden Sie uns Ihre Anfrage.", "Küldje el nekünk a kérését."], "Pages": ["Seiten", "Oldalak"], "Austria ⇄ Hungary": ["Österreich ⇄ Ungarn", "Ausztria ⇄ Magyarország"], "Find reliable suppliers without weeks of searching.": ["Zuverlässige Lieferanten finden, ohne wochenlang zu suchen.", "Megbízható beszállítók hetekig tartó keresgélés nélkül."], "Tell us what you need. You get three to five checked suppliers, each with a clear reason why it fits.": ["Sagen Sie uns, was Sie brauchen. Sie erhalten drei bis fünf geprüfte Lieferanten, jeweils mit klarer Begründung.", "Mondja el, mire van szüksége. Három-öt ellenőrzött beszállítót kap, mindegyiknél világos indoklással."], "Win customers in Austria with enquiries that fit.": ["Kunden in Österreich gewinnen, mit Anfragen, die passen.", "Szerezzen vevőket Ausztriában, illő megkeresésekkel."], "Get verified once and receive only requests that match your machines, materials and capacity.": ["Einmal verifizieren lassen und nur Anfragen erhalten, die zu Ihren Maschinen, Werkstoffen und Kapazitäten passen.", "Egyszer ellenőriztessen, és csak olyan megkereséseket kap, amelyek illenek a gépeihez, anyagaihoz és kapacitásához."], "Austrian buyers": ["Österreichische Einkäufer", "Osztrák vevők"], "Hungarian suppliers": ["Ungarische Lieferanten", "Magyar beszállítók"], "The right match": ["Die passende Verbindung", "A megfelelő párosítás"], "Austrian buyers and Hungarian suppliers, matched by ABC Partners": ["Österreichische Einkäufer und ungarische Lieferanten, vermittelt von ABC Partners", "Osztrák vevők és magyar beszállítók, az ABC Partners közvetítésével"], "Meet the right partner": ["Der passende Partner,", "Megbízható partnerek"], "across the border": ["gleich hinter der Grenze", "a határ mindkét oldalán"], "Request received": ["Anfrage erhalten", "Kérés beérkezett"], "Suppliers checked": ["Lieferanten geprüft", "Beszállítók ellenőrizve"], "Introduction made": ["Kontakt hergestellt", "Bemutatás megtörtént"], "Day 7": ["Tag 7", "7. nap"], "Day 10": ["Tag 10", "10. nap"], "How a match works, step by step": ["So läuft eine Vermittlung ab, Schritt für Schritt", "Így zajlik egy párosítás, lépésről lépésre"], "We connect Austrian buyers with vetted Hungarian suppliers.": ["Wir bringen österreichische Einkäufer mit geprüften Lieferanten aus Ungarn zusammen.", "Osztrák vevőket hozunk össze ellenőrzött magyar beszállítókkal."], "Tell us what you need": ["Sie sagen uns, was Sie brauchen", "Elmondja, mire van szüksége"], "We check suppliers": ["Wir prüfen Lieferanten", "Ellenőrizzük a beszállítókat"], "You meet the best fit": ["Sie treffen den besten Partner", "Találkozik a legjobb partnerrel"], "Three steps to your partner": ["In drei Schritten zum Partner", "Három lépés a partnerig"], "At a glance": ["Auf einen Blick", "Röviden"], "vetted suppliers on your shortlist": ["geprüfte Lieferanten auf Ihrer Shortlist", "ellenőrzött beszállító a listáján"], "days to your shortlist": ["Tage bis zu Ihrer Shortlist", "nap alatt elkészül a lista"], "languages: German, Hungarian, English": ["Sprachen: Deutsch, Ungarisch, Englisch", "nyelv: német, magyar, angol"], "No fee to start": ["Kein Honorar zum Start", "Az indulás díjmentes"], "The shortest way to the": ["Der kürzeste Weg zum", "A legrövidebb út a"], "right buyer": ["richtigen Kunden", "megfelelő vevőhöz"], "We connect suppliers with buyers who need what they make.": ["Wir bringen Zulieferer mit Einkäufern zusammen, die genau ihre Produkte brauchen.", "Összekötjük a beszállítókat azokkal a vevőkkel, akiknek épp az ő termékeikre van szükségük."], "Find new buyers": ["Neue Kunden finden", "Új vevőket keresek"], "Looking for a supplier?": ["Sie suchen einen Lieferanten?", "Beszállítót keres?"], "Four steps from your profile to your first order.": ["In vier Schritten vom Profil zum ersten Auftrag.", "Négy lépésben a profiltól az első megrendelésig."], "We check your documents and references, so buyers can trust the introduction.": ["Wir prüfen Ihre Unterlagen und Referenzen, damit Einkäufer der Vorstellung vertrauen können.", "Ellenőrizzük a dokumentumait és referenciáit, hogy a vevők megbízhassanak a bemutatásban."], "Drawings, volumes, certifications and target price, in one short call.": ["Zeichnungen, Mengen, Zertifizierungen und Zielpreis – in einem kurzen Gespräch.", "Rajzok, mennyiségek, tanúsítványok és célár – egyetlen rövid hívásban."], "We screen suppliers and check capacity, certificates, references and financial health.": ["Wir sichten Lieferanten und prüfen Kapazität, Zertifikate, Referenzen und Finanzlage.", "Felkutatjuk a beszállítókat, és ellenőrizzük a kapacitást, a tanúsítványokat, a referenciákat és a pénzügyi helyzetet."], "A typical engagement for a supplier. Timings depend on the product.": ["Ein typischer Ablauf für Zulieferer. Die Dauer hängt vom Produkt ab.", "Egy beszállítói együttműködés tipikus menete. Az időzítés a terméktől függ."], "We learn what you make, your capacity and the customers you want.": ["Wir lernen Ihre Produkte, Ihre Kapazität und Ihre Wunschkunden kennen.", "Megismerjük, mit gyárt, mekkora a kapacitása és milyen vevőket keres."], "Profile and checks": ["Profil und Prüfung", "Profil és ellenőrzés"], "We build your profile and verify your documents and references.": ["Wir erstellen Ihr Profil und prüfen Ihre Unterlagen und Referenzen.", "Elkészítjük a profilját, és ellenőrizzük a dokumentumait és referenciáit."], "Weeks 2–3": ["Woche 2–3", "2–3. hét"], "Matching": ["Matching", "Párosítás"], "We find buyers who need what you make and check that their demand is real.": ["Wir finden Einkäufer, die Ihre Produkte brauchen, und prüfen, ob der Bedarf echt ist.", "Megkeressük azokat a vevőket, akiknek szükségük van a termékeire, és ellenőrizzük, hogy valós-e az igényük."], "Weeks 3–6": ["Woche 3–6", "3–6. hét"], "Calls, visits, quotes and samples with interested buyers.": ["Gespräche, Besuche, Angebote und Muster mit interessierten Einkäufern.", "Hívások, látogatások, árajánlatok és minták az érdeklődő vevőkkel."], "You focus on production. We find the customers.": ["Sie konzentrieren sich auf die Produktion. Wir finden die Kunden.", "Ön a gyártásra figyel. Mi megtaláljuk a vevőket."], "Finding new buyers takes time, contacts and languages that most manufacturers can't spare. That's the part we handle.": ["Neue Kunden zu finden kostet Zeit, Kontakte und Sprachkenntnisse, die den meisten Herstellern fehlen. Genau das übernehmen wir.", "Új vevőket találni idő, kapcsolatok és nyelvtudás kérdése – ezekből a legtöbb gyártónak kevés jut. Ezt a részt mi intézzük."], "We help suppliers find the right buyers.": ["Wir helfen Zulieferern, die richtigen Kunden zu finden.", "Segítünk a beszállítóknak megtalálni a megfelelő vevőket."], "is a B2B matchmaking company. We know buyers in many industries, speak their language, and take care of the search, the checks and the first conversations.": ["ist ein B2B-Matchmaking-Unternehmen. Wir kennen Einkäufer in vielen Branchen, sprechen ihre Sprache und übernehmen die Suche, die Prüfung und die ersten Gespräche.", "B2B partnerközvetítő cég. Számos iparágban ismerjük a vevőket, beszéljük a nyelvüket, és mi intézzük a keresést, az ellenőrzést és az első tárgyalásokat."], "Suppliers get serious enquiries from customers who already need them. Buyers get a short list of partners who fit.": ["Zulieferer erhalten ernsthafte Anfragen von Kunden, die sie bereits brauchen. Einkäufer erhalten eine kurze Liste passender Partner.", "A beszállítók komoly megkereséseket kapnak olyan vevőktől, akiknek már szükségük van rájuk. A vevők rövid listát kapnak a hozzájuk illő partnerekről."], "Qualified buyers only": ["Nur qualifizierte Einkäufer", "Csak minősített vevők"], "Every enquiry is checked for real demand, volume and budget before it reaches you.": ["Jede Anfrage wird auf echten Bedarf, Menge und Budget geprüft, bevor sie Sie erreicht.", "Minden megkeresést ellenőrzünk – valós igény, mennyiség, költségkeret –, mielőtt Önhöz kerül."], "We speak their language": ["Wir sprechen ihre Sprache", "Beszéljük a nyelvüket"], "We translate requirements, join first calls and explain local business habits.": ["Wir übersetzen Anforderungen, begleiten erste Gespräche und erklären lokale Geschäftsgepflogenheiten.", "Lefordítjuk az igényeket, részt veszünk az első hívásokon, és elmagyarázzuk a helyi üzleti szokásokat."], "Matched to your strengths": ["Passend zu Ihren Stärken", "Az erősségeihez igazítva"], "We only bring you buyers that fit your processes, capacity and order sizes.": ["Wir bringen Ihnen nur Einkäufer, die zu Ihren Prozessen, Ihrer Kapazität und Ihren Auftragsgrößen passen.", "Csak olyan vevőket hozunk, akik illenek a technológiájához, kapacitásához és a kívánt rendelési mérethez."], "Your prices, drawings and customer list stay private, under NDA when needed.": ["Ihre Preise, Zeichnungen und Kundenliste bleiben vertraulich, bei Bedarf unter NDA.", "Árai, rajzai és ügyféllistája bizalmasak maradnak, szükség esetén titoktartási megállapodással."], "What changes when we find buyers for you.": ["Was sich ändert, wenn wir Kunden für Sie finden.", "Mi változik, ha mi keresünk vevőket Önnek."], "Finding buyers": ["Kunden finden", "Vevőkeresés"], "Trade fairs, directories and cold emails, many of them unanswered.": ["Messen, Verzeichnisse und Kaltakquise per E-Mail, oft ohne Antwort.", "Vásárok, katalógusok és hideg megkeresések, sokszor válasz nélkül."], "Buyers who have already confirmed interest and need.": ["Einkäufer, die Interesse und Bedarf bereits bestätigt haben.", "Olyan vevők, akik már megerősítették az érdeklődésüket és az igényüket."], "You find out late whether a buyer is serious.": ["Sie erfahren spät, ob ein Einkäufer es ernst meint.", "Csak későn derül ki, hogy komoly-e a vevő."], "Demand, volume and budget checked before you spend time.": ["Bedarf, Menge und Budget sind geprüft, bevor Sie Zeit investieren.", "Az igényt, a mennyiséget és a keretet ellenőrizzük, mielőtt időt szánna rá."], "Calls, emails and specifications in a foreign language.": ["Gespräche, E-Mails und Spezifikationen in einer Fremdsprache.", "Hívások, e-mailek és specifikációk idegen nyelven."], "We handle the language from the first call to the first order.": ["Wir übernehmen die Sprache vom ersten Gespräch bis zum ersten Auftrag.", "Az első hívástól az első rendelésig mi intézzük a nyelvi részt."], "Time to a first meeting": ["Zeit bis zum ersten Treffen", "Idő az első találkozóig"], "Often months, alongside daily work.": ["Oft Monate, neben dem Tagesgeschäft.", "Gyakran hónapok, a napi munka mellett."], "Typically a few weeks.": ["In der Regel wenige Wochen.", "Általában néhány hét."], "You organise calls and visits yourself.": ["Sie organisieren Gespräche und Besuche selbst.", "A hívásokat és látogatásokat Ön szervezi."], "We arrange calls and visits, and can join them.": ["Wir organisieren Gespräche und Besuche und begleiten Sie auf Wunsch.", "Mi szervezzük a hívásokat és látogatásokat, és igény szerint részt is veszünk rajtuk."], "Where your products are needed.": ["Wo Ihre Produkte gebraucht werden.", "Ahol szükség van a termékeire."], "Tell us what you make. We'll find who needs it.": ["Sagen Sie uns, was Sie herstellen. Wir finden, wer es braucht.", "Mondja el, mit gyárt. Mi megtaláljuk, kinek van rá szüksége."], "No obligation to start": ["Unverbindlicher Start", "Kötelezettség nélküli kezdés"], "B2B matchmaking between suppliers and buyers.": ["B2B-Matchmaking zwischen Zulieferern und Einkäufern.", "B2B partnerközvetítés beszállítók és vevők között."], "right partner": ["richtigen Partner", "megfelelő partnerhez"], "We connect suppliers with retailers.": ["Wir bringen Lieferanten und Händler zusammen.", "Beszállítókat és kereskedőket hozunk össze."], "Find retailers": ["Händler finden", "Kereskedőket keresek"], "Four steps from your profile to your first listing.": ["In vier Schritten vom Profil zur ersten Listung.", "Négy lépésben a profiltól az első polcra kerülésig."], "For retailers": ["Für Händler", "Kereskedőknek"], "Your products, prices, volumes, certifications and the retailers you want to reach.": ["Ihre Produkte, Preise, Mengen, Zertifizierungen und die Händler, die Sie erreichen wollen.", "Termékei, árai, mennyiségei, tanúsítványai és azok a kereskedők, akiket el szeretne érni."], "We check your documents and references, so retailers can trust the introduction.": ["Wir prüfen Ihre Unterlagen und Referenzen, damit Händler der Vorstellung vertrauen können.", "Ellenőrizzük a dokumentumait és referenciáit, hogy a kereskedők megbízhassanak a bemutatásban."], "Only retailers that fit your products, with their requirements translated and explained.": ["Nur Händler, die zu Ihren Produkten passen – mit übersetzten und erklärten Anforderungen.", "Csak a termékeihez illő kereskedők, lefordított és elmagyarázott igényekkel."], "Get listed and grow": ["Gelistet werden und wachsen", "Polcra kerülés és növekedés"], "Win listings, deliver, and keep your profile current as your range grows.": ["Listungen gewinnen, liefern und Ihr Profil aktuell halten, während Ihr Sortiment wächst.", "Kerüljön be új üzletekbe, szállítson, és tartsa naprakészen a profilját, ahogy bővül a kínálata."], "Share what you need": ["Bedarf mitteilen", "Mondja el, mire van szüksége"], "Products, volumes, quality standards and target price, in one short call.": ["Produkte, Mengen, Qualitätsstandards und Zielpreis – in einem kurzen Gespräch.", "Termékek, mennyiségek, minőségi elvárások és célár – egyetlen rövid hívásban."], "Meet and order": ["Kennenlernen und bestellen", "Találkozó és rendelés"], "We arrange introductions and can join the first calls, visits and sample rounds.": ["Wir vermitteln den Kontakt und begleiten auf Wunsch die ersten Gespräche, Besuche und Musterrunden.", "Megszervezzük a bemutatkozást, és igény szerint részt veszünk az első hívásokon, látogatásokon és mintázásokon."], "We learn about your products, your capacity and the retailers you want.": ["Wir lernen Ihre Produkte, Ihre Kapazität und Ihre Wunschhändler kennen.", "Megismerjük a termékeit, a kapacitását és azokat a kereskedőket, akiket szeretne elérni."], "We find retailers who want your products and check that their interest is real.": ["Wir finden Händler, die Ihre Produkte wollen, und prüfen, ob das Interesse echt ist.", "Megkeressük azokat a kereskedőket, akik érdeklődnek a termékei iránt, és ellenőrizzük, hogy valós-e az érdeklődésük."], "Calls, visits, quotes and samples with interested retailers.": ["Gespräche, Besuche, Angebote und Muster mit interessierten Händlern.", "Hívások, látogatások, árajánlatok és minták az érdeklődő kereskedőkkel."], "You focus on your products. We find the retailers.": ["Sie konzentrieren sich auf Ihre Produkte. Wir finden die Händler.", "Ön a termékeire figyel. Mi megtaláljuk a kereskedőket."], "Getting into new retailers takes time, contacts and languages that most suppliers can't spare. That's the part we handle.": ["Neue Händler zu gewinnen kostet Zeit, Kontakte und Sprachkenntnisse, die den meisten Lieferanten fehlen. Genau das übernehmen wir.", "Új kereskedőkhöz bekerülni idő, kapcsolatok és nyelvtudás kérdése – ezekből a legtöbb beszállítónak kevés jut. Ezt a részt mi intézzük."], "We help suppliers find the right retailers.": ["Wir helfen Lieferanten, die richtigen Händler zu finden.", "Segítünk a beszállítóknak megtalálni a megfelelő kereskedőket."], "is a B2B matchmaking company. We know retailers and their buyers, speak their language, and take care of the search, the checks and the first conversations.": ["ist ein B2B-Matchmaking-Unternehmen. Wir kennen Händler und ihre Einkäufer, sprechen ihre Sprache und übernehmen die Suche, die Prüfung und die ersten Gespräche.", "B2B partnerközvetítő cég. Ismerjük a kereskedőket és beszerzőiket, beszéljük a nyelvüket, és mi intézzük a keresést, az ellenőrzést és az első tárgyalásokat."], "Suppliers get serious enquiries from retailers who want their products. Retailers get a short list of suppliers who fit.": ["Lieferanten erhalten ernsthafte Anfragen von Händlern, die ihre Produkte wollen. Händler erhalten eine kurze Liste passender Lieferanten.", "A beszállítók komoly megkereséseket kapnak olyan kereskedőktől, akik keresik a termékeiket. A kereskedők rövid listát kapnak a hozzájuk illő beszállítókról."], "Qualified retailers only": ["Nur qualifizierte Händler", "Csak minősített kereskedők"], "We only bring you retailers that fit your products, capacity and order sizes.": ["Wir bringen Ihnen nur Händler, die zu Ihren Produkten, Ihrer Kapazität und Ihren Liefermengen passen.", "Csak olyan kereskedőket hozunk, akik illenek a termékeihez, kapacitásához és a szállítható mennyiségekhez."], "What changes when we find retailers for you.": ["Was sich ändert, wenn wir Händler für Sie finden.", "Mi változik, ha mi keresünk kereskedőket Önnek."], "Finding retailers": ["Händler finden", "Kereskedők keresése"], "Retailers who have already confirmed their interest.": ["Händler, die ihr Interesse bereits bestätigt haben.", "Olyan kereskedők, akik már megerősítették az érdeklődésüket."], "You find out late whether a retailer is serious.": ["Sie erfahren spät, ob ein Händler es ernst meint.", "Csak későn derül ki, hogy komoly-e a kereskedő."], "Tell us about your products. We'll find the retailers.": ["Erzählen Sie uns von Ihren Produkten. Wir finden die Händler.", "Meséljen a termékeiről. Mi megtaláljuk a kereskedőket."], "I'm a retailer": ["Ich bin Händler", "Kereskedő vagyok"], "Product category": ["Produktkategorie", "Termékkategória"], "e.g. food, cosmetics, household goods": ["z. B. Lebensmittel, Kosmetik, Haushaltswaren", "pl. élelmiszer, kozmetikum, háztartási cikkek"], "What do you offer?": ["Was bieten Sie an?", "Mit kínál?"], "Products, volumes, certifications and capacity": ["Produkte, Mengen, Zertifizierungen und Kapazität", "Termékek, mennyiségek, tanúsítványok és kapacitás"], "What are you looking for?": ["Was suchen Sie?", "Mit keres?"], "Products, volumes and quality standards": ["Produkte, Mengen und Qualitätsstandards", "Termékek, mennyiségek és minőségi elvárások"], "Retailer": ["Händler", "Kereskedő"], "B2B matchmaking between suppliers and retailers.": ["B2B-Matchmaking zwischen Lieferanten und Händlern.", "B2B partnerközvetítés beszállítók és kereskedők között."], "Suppliers · Retailers · Matchmaking": ["Lieferanten · Händler · Matchmaking", "Beszállítók · Kereskedők · Partnerközvetítés"], "We connect suppliers with retailers. We find the partners that fit, check them and set up the first meeting.": ["Wir bringen Lieferanten und Händler zusammen. Wir finden passende Partner, prüfen sie und organisieren das erste Treffen.", "Beszállítókat és kereskedőket hozunk össze. Megtaláljuk a megfelelő partnereket, ellenőrizzük őket, és megszervezzük az első találkozót."], "How we work": ["So arbeiten wir", "Így dolgozunk"], "German · Hungarian · English": ["Deutsch · Ungarisch · Englisch", "Német · magyar · angol"], "NDA on request": ["NDA auf Wunsch", "Titoktartási szerződés igény szerint"], "Two directions": ["Zwei Richtungen", "Két irány"], "Which side are you on?": ["Auf welcher Seite stehen Sie?", "Melyik oldalon áll?"], "You have the products. We find the retailers.": ["Sie haben die Produkte. Wir finden die Händler.", "Önnek megvannak a termékei. Mi megtaláljuk a kereskedőket."], "Get your products in front of retailers who are looking for them.": ["Bringen Sie Ihre Produkte zu Händlern, die danach suchen.", "Juttassa el termékeit azokhoz a kereskedőkhöz, akik keresik őket."], "A clear profile of your products and capacity": ["Ein klares Profil Ihrer Produkte und Kapazität", "Áttekinthető profil a termékeiről és kapacitásáról"], "Introductions only to retailers that fit": ["Vorstellungen nur bei passenden Händlern", "Bemutatás csak a hozzáillő kereskedőknek"], "Help with language and first meetings": ["Unterstützung bei Sprache und ersten Treffen", "Segítség a nyelvben és az első találkozókon"], "Support until the first order": ["Begleitung bis zum ersten Auftrag", "Támogatás az első rendelésig"], "You need products. We find the suppliers.": ["Sie brauchen Produkte. Wir finden die Lieferanten.", "Termékekre van szüksége? Mi megtaláljuk a beszállítókat."], "Get a short list of checked suppliers instead of searching alone.": ["Erhalten Sie eine kurze Liste geprüfter Lieferanten, statt allein zu suchen.", "Ellenőrzött beszállítók rövid listáját kapja, nem kell egyedül keresgélnie."], "One short briefing call": ["Ein kurzes Briefing-Gespräch", "Egyetlen rövid egyeztető hívás"], "Suppliers checked before you meet them": ["Lieferanten geprüft, bevor Sie sie treffen", "Ellenőrzött beszállítók már az első találkozó előtt"], "A short list of three to five options": ["Eine kurze Liste mit drei bis fünf Optionen", "Három–öt lehetőség rövid listája"], "We join the first calls if you want": ["Auf Wunsch begleiten wir die ersten Gespräche", "Igény szerint részt veszünk az első hívásokon"], "What we do for you.": ["Was wir für Sie tun.", "Mit teszünk Önért."], "Retailer search": ["Händlersuche", "Kereskedők felkutatása"], "We find retailers whose range and customers match your products.": ["Wir finden Händler, deren Sortiment und Kunden zu Ihren Produkten passen.", "Olyan kereskedőket keresünk, akiknek kínálata és vásárlói illenek a termékeihez."], "Partner checks": ["Partnerprüfung", "Partnerek ellenőrzése"], "We check documents, references and capacity, so both sides can trust the match.": ["Wir prüfen Unterlagen, Referenzen und Kapazität, damit beide Seiten der Vermittlung vertrauen können.", "Ellenőrizzük a dokumentumokat, a referenciákat és a kapacitást, hogy mindkét fél megbízhasson a párosításban."], "We arrange the first calls and meetings, and can join them.": ["Wir organisieren die ersten Gespräche und Treffen und begleiten sie auf Wunsch.", "Megszervezzük az első hívásokat és találkozókat, és igény szerint részt is veszünk rajtuk."], "Language and follow-up": ["Sprache und Begleitung", "Nyelv és utánkövetés"], "We work in German, Hungarian and English, and stay involved until the first order.": ["Wir arbeiten auf Deutsch, Ungarisch und Englisch und bleiben bis zum ersten Auftrag dabei.", "Németül, magyarul és angolul dolgozunk, és az első rendelésig Ön mellett maradunk."], "A clear path to the right partner.": ["Ein klarer Weg zum richtigen Partner.", "Világos út a megfelelő partnerig."], "One short call about your products and goals.": ["Ein kurzes Gespräch über Ihre Produkte und Ziele.", "Egy rövid hívás a termékeiről és céljairól."], "Research": ["Recherche", "Kutatás"], "We search, check and shortlist the best matches.": ["Wir suchen, prüfen und wählen die besten Partner aus.", "Felkutatjuk, ellenőrizzük és kiválasztjuk a legjobb partnereket."], "Introduction": ["Vorstellung", "Bemutatás"], "We set up the first meetings and join them if you want.": ["Wir organisieren die ersten Treffen und sind auf Wunsch dabei.", "Megszervezzük az első találkozókat, és igény szerint ott vagyunk."], "Follow-through": ["Begleitung", "Utánkövetés"], "We stay involved until the first order.": ["Wir bleiben bis zum ersten Auftrag dabei.", "Az első rendelésig Ön mellett maradunk."], "FAQ": ["FAQ", "GYIK"], "Frequently asked questions.": ["Häufige Fragen.", "Gyakori kérdések."], "Who do you work with?": ["Mit wem arbeiten Sie?", "Kikkel dolgoznak?"], "Suppliers who want to sell to retailers, and retailers looking for new suppliers. We are not limited to one industry or country.": ["Mit Lieferanten, die an den Handel verkaufen wollen, und mit Händlern, die neue Lieferanten suchen. Wir sind nicht auf eine Branche oder ein Land beschränkt.", "Olyan beszállítókkal, akik kereskedőknek szeretnének eladni, és olyan kereskedőkkel, akik új beszállítókat keresnek. Nem kötődünk egyetlen iparághoz vagy országhoz sem."], "How do you find the right retailers?": ["Wie finden Sie die richtigen Händler?", "Hogyan találják meg a megfelelő kereskedőket?"], "We start from your products, prices and capacity, then look for retailers whose range and customers fit. We contact them first and only introduce you when there is real interest.": ["Wir gehen von Ihren Produkten, Preisen und Ihrer Kapazität aus und suchen Händler, deren Sortiment und Kunden passen. Wir sprechen sie zuerst an und stellen Sie nur bei echtem Interesse vor.", "A termékeiből, áraiból és kapacitásából indulunk ki, majd olyan kereskedőket keresünk, akiknek kínálata és vásárlói illenek hozzá. Először mi keressük meg őket, és csak valódi érdeklődés esetén mutatjuk be Önt."], "How long does it take?": ["Wie lange dauert es?", "Mennyi ideig tart?"], "Most suppliers get their first introductions within a few weeks. It depends on the product and the market.": ["Die meisten Lieferanten erhalten ihre ersten Vorstellungen innerhalb weniger Wochen. Das hängt vom Produkt und vom Markt ab.", "A legtöbb beszállító néhány héten belül megkapja az első bemutatásokat. Ez a terméktől és a piactól függ."], "What does it cost?": ["Was kostet es?", "Mennyibe kerül?"], "It depends on the scope. After a short briefing call you get a clear offer, with no obligation.": ["Das hängt vom Umfang ab. Nach einem kurzen Briefing-Gespräch erhalten Sie ein klares, unverbindliches Angebot.", "A feladat terjedelmétől függ. Egy rövid egyeztető hívás után egyértelmű, kötelezettség nélküli ajánlatot kap."], "Is my information kept confidential?": ["Bleiben meine Daten vertraulich?", "Bizalmasan kezelik az adataimat?"], "Yes. We only share your details with partners you approve, and we sign an NDA on request.": ["Ja. Wir geben Ihre Daten nur an Partner weiter, denen Sie zustimmen, und unterzeichnen auf Wunsch eine NDA.", "Igen. Csak az Ön által jóváhagyott partnerekkel osztjuk meg az adatait, és kérésre titoktartási szerződést kötünk."], "B2B matchmaking for suppliers": ["B2B-Vermittlung für Lieferanten", "B2B-partnerközvetítés beszállítóknak"], "Our process": ["Unser Ablauf", "Így dolgozunk"], "Any industry · Any country": ["Jede Branche · Jedes Land", "Bármely iparág · Bármely ország"], "Your own contact person": ["Ihr persönlicher Ansprechpartner", "Saját kapcsolattartó"], "Who we help": ["Für wen wir arbeiten", "Kiknek segítünk"], "Built for both sides of the deal.": ["Für beide Seiten des Geschäfts.", "Az üzlet mindkét oldalán."], "Find suppliers": ["Lieferanten finden", "Beszállítókat keresek"], "Our services": ["Unsere Leistungen", "Szolgáltatásaink"], "One partner for the whole search.": ["Ein Partner für die ganze Suche.", "Egy partner a teljes kereséshez."], "Step by step": ["Schritt für Schritt", "Lépésről lépésre"], "Getting to know you": ["Kennenlernen", "Megismerés"], "First meeting": ["Erstes Treffen", "Első találkozó"], "First order": ["Erste Bestellung", "Első rendelés"], "Questions we often hear.": ["Fragen, die wir oft hören.", "Gyakran felmerülő kérdések."], "Two founders, one clear idea.": ["Zwei Gründer, eine klare Idee.", "Két alapító, egy világos cél."], "FORA Partners was founded by two business partners who know the same problem from both sides. Good suppliers struggle to get in front of the right retailers, and retailers spend too much time looking for reliable suppliers.": ["FORA Partners wurde von zwei Geschäftspartnern gegründet, die dasselbe Problem von beiden Seiten kennen. Gute Lieferanten finden nur schwer den Weg zu den richtigen Händlern, und Händler verbringen zu viel Zeit mit der Suche nach verlässlichen Lieferanten.", "A FORA Partnerst két üzlettárs alapította, akik ugyanazt a problémát mindkét oldalról ismerik. A jó beszállítók nehezen jutnak el a megfelelő kereskedőkhöz, a kereskedők pedig túl sok időt töltenek megbízható beszállítók keresésével."], "We want to make that first step simple. We listen first, search carefully and only introduce partners who really fit. From the first call to the first order, you always deal with one of the two founders.": ["Diesen ersten Schritt wollen wir einfach machen. Wir hören zuerst zu, suchen sorgfältig und stellen nur Partner vor, die wirklich passen. Vom ersten Gespräch bis zur ersten Bestellung sprechen Sie immer mit einem der beiden Gründer.", "Ezt az első lépést szeretnénk egyszerűvé tenni. Először meghallgatjuk Önt, alaposan keresünk, és csak olyan partnert mutatunk be, aki valóban illik Önhöz. Az első beszélgetéstől az első rendelésig mindig az egyik alapítóval tartja a kapcsolatot."], "The name FORA comes from the Latin word for meeting places. That is what we want to be: the place where the right partners meet.": ["Der Name FORA kommt vom lateinischen Wort für Treffpunkte. Genau das wollen wir sein: der Ort, an dem die richtigen Partner zusammenfinden.", "A FORA név a „találkozóhely” jelentésű latin szóból ered. Ezt szeretnénk nyújtani: egy helyet, ahol a megfelelő partnerek egymásra találnak."], "Personal": ["Persönlich", "Személyes"], "You always speak to one of the founders, never to a call centre.": ["Sie sprechen immer mit einem der Gründer, nie mit einem Callcenter.", "Mindig az egyik alapítóval beszél, sosem egy ügyfélszolgálattal."], "Careful": ["Sorgfältig", "Alapos"], "We check partners before we introduce them, so your time is not wasted.": ["Wir prüfen Partner, bevor wir sie vorstellen. So verlieren Sie keine Zeit.", "A partnereket bemutatás előtt ellenőrizzük, így nem veszít időt."], "Open": ["Offen", "Nyitott"], "We work across industries and countries, in German, Hungarian and English.": ["Wir arbeiten branchen- und länderübergreifend, auf Deutsch, Ungarisch und Englisch.", "Iparágtól és országtól függetlenül dolgozunk, németül, magyarul és angolul."], "Clear": ["Klar", "Átlátható"], "You get a clear offer before we start, with no obligation.": ["Vor dem Start erhalten Sie ein klares Angebot, ohne Verpflichtung.", "Indulás előtt világos ajánlatot kap, kötelezettség nélkül."]};
+  const LANGS = ["en", "de", "hu"];
+  let lang = "en";
+  function t(en) {
+    const row = I18N[en];
+    return lang === "en" || !row ? en : row[LANGS.indexOf(lang) - 1];
+  }
+
+  // Remember the original English of every text node and translatable attribute.
+  const textNodes = [];
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode: n => n.parentElement.closest("script, style, [data-brand], #sent, #details-label, [data-lang-block], #inbox-rows") || !n.nodeValue.trim() ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+  });
+  while (walker.nextNode()) {
+    const n = walker.currentNode, v = n.nodeValue;
+    textNodes.push({ n, en: v.trim(), lead: v.match(/^\s*/)[0], trail: v.match(/\s*$/)[0] });
+  }
+  const attrs = [];
+  document.querySelectorAll("[aria-label], [placeholder]").forEach(el => {
+    ["aria-label", "placeholder"].forEach(a => { if (el.hasAttribute(a) && el.id !== "f-details") attrs.push({ el, a, en: el.getAttribute(a) }); });
+  });
+
+  // Tabs
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  function selectTab(id) {
+    tabs.forEach(tab => {
+      const on = tab.id === id;
+      tab.setAttribute("aria-selected", on);
+      document.getElementById(tab.getAttribute("aria-controls")).hidden = !on;
+    });
+  }
+  tabs.forEach(tab => tab.addEventListener("click", () => selectTab(tab.id)));
+
+  // Role switch
+  const label = document.getElementById("details-label");
+  const details = document.getElementById("f-details");
+  const roleCopy = {
+    buyer: ["What are you looking for?", "Products, volumes and quality standards"],
+    supplier: ["What do you offer?", "Products, volumes, certifications and capacity"]
+  };
+  let role = "supplier";
+  function renderRole() {
+    label.textContent = t(roleCopy[role][0]);
+    details.placeholder = t(roleCopy[role][1]);
+  }
+  function setRole(r) {
+    role = r;
+    document.getElementById("role-" + r).checked = true;
+    renderRole();
+    selectTab(r === "buyer" ? "tab-buyers" : "tab-suppliers");
+  }
+  document.querySelectorAll('input[name="role"]').forEach(r => r.addEventListener("change", () => setRole(r.value)));
+  document.querySelectorAll("[data-role-link]").forEach(a => a.addEventListener("click", () => setRole(a.dataset.roleLink)));
+
+  // Language switch
+  const sent = document.getElementById("sent");
+  function setLang(l) {
+    lang = LANGS.includes(l) ? l : "en";
+    document.documentElement.lang = lang;
+    textNodes.forEach(x => { x.n.nodeValue = x.lead + t(x.en) + x.trail; });
+    attrs.forEach(x => x.el.setAttribute(x.a, t(x.en)));
+    renderRole();
+    document.querySelectorAll("[data-lang-block]").forEach(b => { b.hidden = b.dataset.langBlock !== lang; });
+    renderInbox();
+    sent.hidden = true;
+    document.querySelectorAll("[data-lang]").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === lang));
+    try { localStorage.setItem("lang", lang); } catch (e) {}
+  }
+  document.querySelectorAll("[data-lang]").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+  let saved = null;
+  try { saved = localStorage.getItem("lang"); } catch (e) {}
+  const fromHash = location.hash.slice(1);
+  setLang(LANGS.includes(fromHash) ? fromHash : saved || "en");
+
+  // Pages: each section belongs to one page; the URL anchor picks the page.
+  // One-page layout: older tab links scroll to the matching section.
+  const ALIAS = { sides: "home", why: "services", how: "process", industries: "home", clients: "home", "about-us": "about" };
+  function goTo(h) { const el = document.getElementById(ALIAS[h] || h); if (el) el.scrollIntoView(); }
+  if (fromHash && !LANGS.includes(fromHash)) goTo(fromHash);
+  window.addEventListener("hashchange", () => goTo(location.hash.slice(1)));
+
+  document.querySelectorAll("[data-tab-link]").forEach(a => a.addEventListener("click", () => selectTab("tab-" + a.dataset.tabLink)));
+
+  // Legal dialogs
+  document.querySelectorAll("[data-open]").forEach(b => b.addEventListener("click", () => {
+    const d = document.getElementById(b.dataset.open);
+    document.querySelectorAll("dialog[open]").forEach(o => o !== d && o.close());
+    if (!d.open) d.showModal();
+  }));
+  document.querySelectorAll("dialog [data-close]").forEach(b => b.addEventListener("click", () => b.closest("dialog").close()));
+  document.querySelectorAll("dialog").forEach(d => d.addEventListener("click", e => { if (e.target === d) d.close(); }));
+
+  // Cookie notice: only strictly necessary browser storage is used, so this is information, not consent.
+  const bar = document.getElementById("cookie-bar");
+  let seen = false;
+  try { seen = localStorage.getItem("cookie-notice") === "1"; } catch (e) {}
+  bar.hidden = seen;
+  document.getElementById("cookie-ok").addEventListener("click", () => {
+    bar.hidden = true;
+    try { localStorage.setItem("cookie-notice", "1"); } catch (e) {}
+  });
+
+  // Form sending. On the live site, paste the Web3Forms access key here (it arrives by email from web3forms.com):
+  // every request is then emailed to the address the key was created for.
+  // Inside claude.ai (no key), requests are saved to this page's database and shown to the owner.
+  const WEB3FORMS_KEY = "b7e71061-b60f-4108-beb8-f0b700ff6a02";
+  const FORM_ENDPOINT = "https://api.web3forms.com/submit";
+  const dbReady = window.claude ? claude.use("db") : Promise.resolve(null);
+  const userReady = window.claude ? claude.use("user") : Promise.resolve(null);
+
+  async function saveRequest(entry) {
+    const [db, user] = await Promise.all([dbReady, userReady]);
+    const uid = user && await user.id();
+    if (WEB3FORMS_KEY) {
+      // Readable field names, so the notification email is easy to scan. "email" becomes the reply-to address.
+      const mail = {
+        access_key: WEB3FORMS_KEY, from_name: "FORA Partners website",
+        subject: "New request from " + entry.company + " (" + (entry.role === "supplier" ? "supplier" : "retailer") + ")",
+        "Type": entry.role === "supplier" ? "Supplier" : "Retailer",
+        "Name": entry.name, "Company": entry.company, email: entry.email,
+        "Country": entry.country, "Product category": entry.industry, "Message": entry.details,
+        "Site language": entry.lang.toUpperCase(), "Consent to processing": "Yes", "Sent at": entry.at
+      };
+      const res = await fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(mail) });
+      const out = await res.json().catch(() => ({}));
+      if (!res.ok || out.success === false) throw new Error("HTTP " + res.status);
+      return true;
+    }
+    if (db && uid) {
+      const ref = db.doc("requests/" + uid);
+      const snap = await ref.get();
+      const prev = snap.exists && Array.isArray(snap.data().submissions) ? snap.data().submissions : [];
+      await ref.set({ submissions: [...prev, entry].slice(-50), lastAt: entry.at });
+      return true;
+    }
+    return false;
+  }
+
+  const form = document.getElementById("match-form");
+  document.getElementById("f-consent").addEventListener("change", e => { if (e.target.checked) e.target.removeAttribute("aria-invalid"); });
+  form.addEventListener("input", e => { if (e.target.getAttribute("aria-invalid") && e.target.checkValidity() && e.target.value.trim()) e.target.removeAttribute("aria-invalid"); });
+  const submitBtn = document.getElementById("submit-btn");
+  function showMsg(text, kind) { sent.hidden = false; sent.className = "sent " + (kind || ""); sent.textContent = text; }
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    const missing = [...form.querySelectorAll("input[type=text], input:not([type]), input[type=email]")].filter(i => i.required && (!i.value.trim() || !i.checkValidity()));
+    form.querySelectorAll("[aria-invalid]").forEach(i => i.removeAttribute("aria-invalid"));
+    missing.forEach(i => i.setAttribute("aria-invalid", "true"));
+    if (missing.length) { showMsg(t("Please add your name, company and a valid work email so we can reply."), "err"); missing[0].focus(); return; }
+    const consent = document.getElementById("f-consent");
+    if (!consent.checked) { consent.setAttribute("aria-invalid", "true"); showMsg(t("Please confirm that we may process your details."), "err"); consent.focus(); return; }
+    const val = id => document.getElementById(id).value.trim();
+    // Spam trap: people never see this field, bots usually fill it. Pretend success and send nothing.
+    if (val("f-website")) { showMsg(t("Thanks, {n}. Your request has been sent. We'll reply within one business day.").replace("{n}", val("f-name").split(" ")[0]), "ok"); form.reset(); return; }
+    const entry = { at: new Date().toISOString(), role, name: val("f-name"), company: val("f-company"), email: val("f-email"), country: val("f-country"), industry: val("f-industry"), details: val("f-details"), lang, consent: true };
+    submitBtn.disabled = true;
+    showMsg(t("Sending…"));
+    try {
+      if (await saveRequest(entry)) {
+        showMsg(t("Thanks, {n}. Your request has been sent. We'll reply within one business day.").replace("{n}", entry.name.split(" ")[0]), "ok");
+        form.reset(); setRole("supplier");
+      } else {
+        showMsg(t("Sending isn't available here. Open the page while signed in to claude.ai, or set a form address for the live site."), "err");
+      }
+    } catch (err) {
+      showMsg(t("Your request couldn't be sent. Please try again in a moment."), "err");
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+
+  // Owner inbox
+  var inboxDocs = [];
+  function renderInbox() {
+    const rows = document.getElementById("inbox-rows");
+    if (!rows) return;
+    const all = (inboxDocs || []).flatMap(d => d.submissions || []).sort((a, b) => String(b.at).localeCompare(String(a.at)));
+    document.getElementById("inbox-empty").hidden = all.length > 0;
+    document.getElementById("inbox-table").hidden = all.length === 0;
+    rows.replaceChildren(...all.map(r => {
+      const tr = document.createElement("tr");
+      const when = new Date(r.at);
+      const cells = [
+        [isNaN(when) ? "" : when.toLocaleString(lang === "en" ? "en-GB" : lang, { dateStyle: "short", timeStyle: "short" }), "when"],
+        [t(r.role === "supplier" ? "Supplier" : "Retailer")], [r.name], [r.company], [r.email], [t(r.country || "")], [t(r.industry || "")], [r.details, "msg"]
+      ];
+      cells.forEach(([v, cls]) => { const td = document.createElement("td"); td.textContent = v || ""; if (cls) td.className = cls; tr.append(td); });
+      return tr;
+    }));
+  }
+  (async () => {
+    const [db, user] = await Promise.all([dbReady, userReady]);
+    if (!db || !user || !(await user.isOwner())) return;
+    document.getElementById("inbox").hidden = false;
+    db.collection("requests").onSnapshot(snap => {
+      inboxDocs = snap.docs.map(d => d.data() || {});
+      renderInbox();
+    }, () => {});
+  })();
+</script>
+
+</body>
+</html>
