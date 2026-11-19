@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" data-type="service" data-radius="soft" data-buttons="block">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FORA Partners: imprint</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<meta name="theme-color" content="#faf7f1">
+<style>
+@font-face { font-family: "Hanken Grotesk"; font-style: normal; font-weight: 400 800; font-display: swap;
+  src: url(fonts/hanken-normal-400-800-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Hanken Grotesk"; font-style: normal; font-weight: 400 800; font-display: swap;
+  src: url(fonts/hanken-normal-400-800-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* the logo's own face, only for the wordmark (the logo stays exactly as it was) */
+@font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-weight: 200 800; font-display: swap;
+  src: url(fonts/plus-jakarta-sans-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-weight: 200 800; font-display: swap;
+  src: url(fonts/plus-jakarta-sans-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+</style>
+<link rel="stylesheet" href="assets/system.css">
+<style>
+:root {
+  --p-bg: #faf7f1; --p-surface: #f2ecdf; --p-ink: #0e1a33; --p-muted: #4b5468;
+  --p-accent: #0e1a33; --p-accent-ink: #faf7f1; --p-action: #0e1a33; --p-action-ink: #faf7f1;
+  --p-inv-bg: #0e1a33; --p-inv-surface: #172645; --p-inv-ink: #faf7f1; --p-inv-muted: #b9c0ce;
+  --p-inv-accent: #d4b97f; --p-inv-accent-ink: #0e1a33; --p-inv-action: #d4b97f; --p-inv-action-ink: #0e1a33;
+  --gold: #c9a96b; --gold-ink: #8a6a2f;
+  --font-display: "Hanken Grotesk", system-ui, sans-serif;
+  --font-text: "Hanken Grotesk", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.03em;
+  --display-tracking-xl: -0.038em;
+}
+</style>
+<style>
+  .fora-logo { display: inline-flex; align-items: center; gap: 10px; color: #0E1A33; text-decoration: none; }
+  .fora-logo svg { width: 34px; height: 34px; flex: none; }
+  .fora-logo .wm { display: grid; line-height: 1; font-family: "Plus Jakarta Sans", var(--font-text); }
+  .fora-logo .wm b { font-weight: 800; font-size: 18px; letter-spacing: .05em; color: #0E1A33; }
+  .fora-logo .wm span { font-weight: 600; font-size: 8px; letter-spacing: .22em; color: #5A6478; margin-top: 4px; }
+  .langs { display: inline-flex; gap: 2px; margin-right: var(--s-3); }
+  .langs button { font: 500 14px/1 var(--font-text); color: var(--muted); background: none; border: 0; padding: 10px 8px; min-height: 44px; cursor: pointer; border-radius: 6px; }
+  .langs button[aria-pressed="true"] { color: var(--ink); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+  .legal-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 20px; border-bottom: 1px solid var(--line); }
+  .legal { padding-block: 64px 96px; max-width: 760px; }
+  .legal h1 { font-size: var(--t-h2); margin-bottom: 32px; }
+  .legal h3 { font: 500 var(--t-lead)/1.4 var(--font-text); margin: 32px 0 8px; }
+  .legal p, .legal li { max-width: 68ch; }
+  .legal p + p { margin-top: 12px; }
+  .legal ul { padding-left: 20px; list-style: disc; display: grid; gap: 6px; margin: 8px 0 12px; }
+  .legal dl { display: grid; grid-template-columns: minmax(140px, 220px) 1fr; gap: 12px 24px; margin-top: 24px; }
+  .legal dt { font-weight: 500; }
+  .legal a { text-decoration: underline; }
+  @media (max-width: 639px) { .legal dl { grid-template-columns: 1fr; gap: 4px; } .legal dd { margin-bottom: 12px; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="fora-mark" viewBox="0 0 40 40"><path d="M6 6h19v6.5H12.5V25H6Z" fill="#0E1A33" stroke="#0E1A33" stroke-width="1.6" stroke-linejoin="round"/><path d="M34 34H15v-6.5h12.5V15H34Z" fill="#2F6BFF" stroke="#2F6BFF" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+</svg>
+<header class="wrap legal-bar">
+  <a class="fora-logo" href="index.html" aria-label="FORA Partners, home"><svg aria-hidden="true"><use href="#fora-mark"/></svg><span class="wm" aria-hidden="true"><b>FORA</b><span>PARTNERS</span></span></a>
+  <div class="langs" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="de" aria-pressed="false">DE</button><button type="button" data-lang="hu" aria-pressed="false">HU</button></div>
+</header>
+<main class="wrap legal">
+  <h1>Imprint</h1>
+  <div data-lang-block="en">
+      <p>Information pursuant to § 5 E-Commerce Act (ECG), § 63 Trade Act (GewO) and § 25 Media Act (MedienG).</p>
+      <dl>
+        <dt>Operator</dt><dd>Levente Richárd Fónai, sole trader, trading as FORA Partners</dd>
+        <dt>Founders</dt><dd>Levente Richárd Fónai<br>Nándor Rada</dd>
+        <dt>Address</dt><dd>Schönburgstraße 7/10, 1040 Vienna, Austria</dd>
+        <dt>Email</dt><dd><a href="mailto:contact@forapartners.eu">contact@forapartners.eu</a></dd>
+        <dt>Trade licence</dt><dd>Handelsagent (commercial agent), free trade, GISA number 40282466, since 22 October 2026</dd>
+        <dt>Trade authority</dt><dd>Magistrat der Stadt Wien, Magistratisches Bezirksamt für den 4. und 5. Bezirk</dd>
+        <dt>Chamber</dt><dd>Wirtschaftskammer Wien (Vienna Economic Chamber)</dd>
+        <dt>Applicable rules</dt><dd>Gewerbeordnung (GewO), available at www.ris.bka.gv.at</dd>
+        <dt>Company register</dt><dd>Not entered in the company register (Firmenbuch)</dd>
+        <dt>Hosting provider</dt><dd>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (GitHub Pages)</dd>
+        <dt>Media owner and publisher</dt><dd>Levente Richárd Fónai, Schönburgstraße 7/10, 1040 Vienna, Austria. Editorial line: information about FORA Partners and its services.</dd>
+      </dl>
+    </div>
+    <div data-lang-block="de">
+      <p>Angaben gemäß § 5 ECG, § 63 GewO und § 25 MedienG.</p>
+      <dl>
+        <dt>Betreiber</dt><dd>Levente Richárd Fónai, Einzelunternehmer, tätig unter der Bezeichnung FORA Partners</dd>
+        <dt>Gründer</dt><dd>Levente Richárd Fónai<br>Nándor Rada</dd>
+        <dt>Anschrift</dt><dd>Schönburgstraße 7/10, 1040 Wien, Österreich</dd>
+        <dt>E-Mail</dt><dd><a href="mailto:contact@forapartners.eu">contact@forapartners.eu</a></dd>
+        <dt>Gewerbe</dt><dd>Handelsagent, freies Gewerbe, GISA-Zahl 40282466, seit 22.10.2026</dd>
+        <dt>Gewerbebehörde</dt><dd>Magistrat der Stadt Wien, Magistratisches Bezirksamt für den 4. und 5. Bezirk</dd>
+        <dt>Kammer</dt><dd>Wirtschaftskammer Wien</dd>
+        <dt>Berufsrecht</dt><dd>Gewerbeordnung (GewO), abrufbar unter www.ris.bka.gv.at</dd>
+        <dt>Firmenbuch</dt><dd>Nicht im Firmenbuch eingetragen</dd>
+        <dt>Hosting-Anbieter</dt><dd>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (GitHub Pages)</dd>
+        <dt>Medieninhaber und Herausgeber</dt><dd>Levente Richárd Fónai, Schönburgstraße 7/10, 1040 Wien, Österreich. Blattlinie: Information über FORA Partners und seine Leistungen.</dd>
+      </dl>
+    </div>
+    <div data-lang-block="hu">
+      <p>Az osztrák ECG 5. §, GewO 63. § és MedienG 25. § szerinti adatok.</p>
+      <dl>
+        <dt>Üzemeltető</dt><dd>Fónai Levente Richárd egyéni vállalkozó, FORA Partners néven</dd>
+        <dt>Alapítók</dt><dd>Fónai Levente Richárd<br>Rada Nándor</dd>
+        <dt>Cím</dt><dd>Schönburgstraße 7/10, 1040 Bécs, Ausztria</dd>
+        <dt>E-mail</dt><dd><a href="mailto:contact@forapartners.eu">contact@forapartners.eu</a></dd>
+        <dt>Iparengedély</dt><dd>Handelsagent (kereskedelmi ügynök), szabad ipar, GISA-szám: 40282466, 2026. október 22. óta</dd>
+        <dt>Iparhatóság</dt><dd>Magistrat der Stadt Wien, Magistratisches Bezirksamt für den 4. und 5. Bezirk</dd>
+        <dt>Kamara</dt><dd>Wirtschaftskammer Wien (Bécsi Gazdasági Kamara)</dd>
+        <dt>Irányadó szabályok</dt><dd>Gewerbeordnung (GewO), elérhető: www.ris.bka.gv.at</dd>
+        <dt>Cégjegyzék</dt><dd>Nincs bejegyezve az osztrák cégjegyzékbe (Firmenbuch)</dd>
+        <dt>Tárhelyszolgáltató</dt><dd>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (GitHub Pages)</dd>
+        <dt>Médiatulajdonos és kiadó</dt><dd>Fónai Levente Richárd, Schönburgstraße 7/10, 1040 Bécs, Ausztria. Tartalmi irányvonal: tájékoztatás a FORA Partnersről és szolgáltatásairól.</dd>
+      </dl>
+    </div>
+  <p style="margin-top:48px"><a class="link" href="index.html">Back to the site</a></p>
+</main>
+<script src="i18n.js"></script>
+</body>
+</html>
